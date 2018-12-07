@@ -26,9 +26,9 @@ MonoBehaviour:
     Mp: 50
     Mpmax: 100
   XY:
-    X: -5.593773
-    Y: 13.596115
-    Z: -2607.3604
+    X: 139.1
+    Y: -113489.72
+    Z: 115.4
     map: 3
     Camera: -1.9693186
   Money:
@@ -137,8 +137,8 @@ MonoBehaviour:
     ID: 4
     skill: 0
   Anim_max: 15
-  Skill: "\x01\x01\x01\x01\x01"
-  Skill_op: "\x01\x01\x01\x01\x01"
+  Skill: d1d1d1d1d1
+  Skill_op: d1d1d1d1d1
   ability:
     mobile: 25
     jump: 10

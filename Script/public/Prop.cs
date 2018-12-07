@@ -24,7 +24,7 @@ public class Prop : MonoBehaviour
     private GameObject Menu_UI;
     public User.Backpack data;
     private int USE_Rarrty = -1;
-
+   // public int 
     /// <summary>
     /// 資料跟新
     /// </summary>
