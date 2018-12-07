@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8cf26991f9bd470428709cd465282683
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - user: {fileID: 11400000, guid: a7f18a82f67f51b4f82b09269a8fad54, type: 2}
+  - article_Inventory: {fileID: 11400000, guid: f58c3b07def1adc48bd18fcd89cc4ac5,
+      type: 2}
+  - library: {fileID: 114006407206074918, guid: 84fd5085ad9d9ae4f9de11d319c8a4e5,
+      type: 2}
+  - image: {instanceID: 0}
+  - image2: {instanceID: 0}
+  - Name: {instanceID: 0}
+  - Description_text: {instanceID: 0}
+  - value: {instanceID: 0}
+  - time: {instanceID: 0}
+  - ameObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
