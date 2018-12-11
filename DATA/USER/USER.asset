@@ -27,7 +27,7 @@ MonoBehaviour:
     Mpmax: 100
   XY:
     X: 139.1
-    Y: -113489.72
+    Y: -100232.766
     Z: 115.4
     map: 3
     Camera: -1.9693186
@@ -147,9 +147,9 @@ MonoBehaviour:
     wisdom: 0
     Stun: 0
   Load: 0
-  direction: {x: -0.12567666, y: 0.9920713}
+  direction: {x: -0.96371174, y: 0.26694492}
   jump: 0
-  but: 1
+  but: 0
   but_no: 0
   too: 0
   skill_play: -1
