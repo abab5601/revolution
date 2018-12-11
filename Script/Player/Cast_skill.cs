@@ -37,7 +37,6 @@ public class Cast_skill : MonoBehaviour {
             if (Array != -1)//有武器
             {
                 ID = data.FindIndex(a => a.ID == user.backpack[Array].ID);
-                Debug.Log(ID);
                 Arms_L = Instantiate(article_inventory.commodity[ID].gameObject, L_position,true);
                 Arms_L.GetComponent<Prop>().display(Array);
             }

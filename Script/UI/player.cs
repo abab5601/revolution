@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
-
+/// <summary>
+/// 玩家用 script
+/// </summary>
 public class player : MonoBehaviour
-{//玩家用 script
-    //玩家左右手
-    public Transform user_r, user_l;
-
-
-
+{
     private Coroutine cououtine;
     //user 動畫
     //public GameObject user_;
@@ -28,14 +25,9 @@ public class player : MonoBehaviour
     private float high, high_up;//高
 
 
-    public GameObject g;
-    public GameObject i;
-    public GameObject kill;
-    public Animator Kanim;
     void Start()
     {
         anim = this.GetComponent<Animator>();
-        Kanim = this.GetComponent<Animator>();
     }
     private void Awake()
     {
@@ -45,13 +37,6 @@ public class player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.I))
-        {
-            anim.SetInteger("Anim_ID", 1);
-            Instantiate(i, kill.transform.position, kill.transform.rotation);
-            Destroy(i, 2f);
-            //Injured
-        }
         #region 玩家跳躍高度檢查
         if (transform.position.y > high_up)
             high_up = transform.position.y;
