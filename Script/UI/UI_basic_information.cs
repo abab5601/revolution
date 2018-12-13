@@ -62,8 +62,8 @@ public class UI_basic_information : MonoBehaviour {
             case World.map.Account_registration:
                 map.text = "地圖:重生的道路";
                 break;
-            case World.map.show:
-                map.text = "地圖:武器展示";
+            case World.map.UI:
+                map.text = "地圖:UI測試";
                 break;
             case World.map.Trainingteam:
                 map.text = "地圖:中央城市";

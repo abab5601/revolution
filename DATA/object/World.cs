@@ -58,13 +58,13 @@ public class World : ScriptableObject {
     public Sprite Screen;
     [Header("小提示")]
     public string[] prompt;
-       
+
     public enum map
     {
-        home=0,//首頁
-        Account_registration=1,//一開始的傳送用
-        show=2,//物件展示用
-        Trainingteam=3//初始城鎮
+        home = 0,//首頁
+        Account_registration = 1,//一開始的傳送用
+        Trainingteam = 2,//初始城鎮
+        UI = 3
     };
     [System.Serializable]
     public struct ability

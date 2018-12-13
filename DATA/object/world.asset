@@ -50,5 +50,5 @@ MonoBehaviour:
   NPC_GO: 10
   NPC_distance: 100
   NPC_distance_MAX: 1000000
-  Screen: {fileID: 21300000, guid: 0892ae71b2ee78642968712db3f7c3e2, type: 3}
+  Screen: {fileID: 21300000, guid: 1bd37dfeeda5f1c4d84285d0672d1852, type: 3}
   prompt: []
