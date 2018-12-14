@@ -29,7 +29,7 @@ MonoBehaviour:
     X: 139.1
     Y: -100232.766
     Z: 115.4
-    map: 1
+    map: 3
     Camera: -1.9693186
   Money:
     gold: 0
