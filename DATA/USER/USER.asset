@@ -27,15 +27,15 @@ MonoBehaviour:
     Mpmax: 100
   XY:
     X: 139.1
-    Y: -100232.766
+    Y: -0.191262
     Z: 115.4
-    map: 3
+    map: 1
     Camera: -1.9693186
   Money:
     gold: 0
     silver: 0
     copper: 0
-  talent: 0100000001000000010000000100000001000000
+  talent: 0200000001000000010000000100000001000000
   chatroom: []
   Ctrl: []
   backpackMax: 15
@@ -140,7 +140,7 @@ MonoBehaviour:
   Skill: d1d1d1d1d1
   Skill_op: d1d1d1d1d1
   ability:
-    mobile: 25
+    mobile: 10
     jump: 10
     power: 0
     agile: 0

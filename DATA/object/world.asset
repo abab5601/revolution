@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c06e64dee0a2e4bb978681693ec02c, type: 3}
   m_Name: world
   m_EditorClassIdentifier: 
-  Ability: 10
+  Ability: 5
   jump: 10
   power: 0
   agile: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   high: 1
   high_up: 1
   high_hp: 1
-  Time: 613
+  Time: 622
   Time_x: 0.5
   NPC_MAX: 10
   NPC_GO: 10
