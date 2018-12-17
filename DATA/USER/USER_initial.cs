@@ -21,9 +21,10 @@ public class USER_initial : ScriptableObject
     public int[] talent;
     [Header("聊天室")]
     public string[] chatroom;
+    [Header("彈跳對話框內容")]
+    public Conversation_format[] conversation;
     [Header("狀態")]
     public control[] Ctrl;//狀態ID
-
     [Header("背包上限")]
     public int backpackMax;
     [Header("背包")]
@@ -214,6 +215,23 @@ public class USER_initial : ScriptableObject
         necklace, //項鍊
         gloves,//手套
         Special_props//特殊道具
+    }
+    #endregion
+    #region 對話
+    public struct Conversation_format
+    {
+        [Header("對話內容會自動加入對話框")]
+        [Header("對話內容")]
+        public string String;
+        [Header("人物圖片或會話提示圖\n如為null將會隱藏圖片")]
+        public Sprite sprite;
+        [Header("乙讀呼叫,放入值為函式\n回傳值如果沒有選項回傳-1\n如有回傳選項ID")]
+        [Header("如果放入值為null會自動顯示下一行\n如果沒有下一行會自動關閉對話框")]
+        public System.Action GameObject;
+        [Header("選項,回傳陣列ID")]
+        public string[] Option;
+        [Header("文字背景顏色")]
+        public Color background;
     }
     #endregion
     #endregion

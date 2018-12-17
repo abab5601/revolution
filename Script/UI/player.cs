@@ -148,7 +148,7 @@ public class player : MonoBehaviour
         if (high_up - high >= world.high && high_up - high >= User.ability.jump)
         {
 
-            Debug.Log(high_up - high);
+
             HP(-(((high_up - high - world.high) / world.high_up)) * world.high_hp);
 
         }
