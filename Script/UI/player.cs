@@ -123,7 +123,7 @@ public class player : MonoBehaviour
         else mobile = mobile - mobile_;
         if ((jump_ * -1) > jump) jump = 0f;
         else jump = jump - jump_;
-        User.ability.mobile = ((world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + mobile : world.Basic.value[0];/*天賦*/
+       // User.ability.mobile = ((world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + mobile : world.Basic.value[0];/*天賦*/
           User.ability.jump = ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + jump) : (world.jump * User.talent[1] + jump);/*天賦*/
         User.ability.Stun = Stun;
     }
