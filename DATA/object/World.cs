@@ -58,7 +58,8 @@ public class World : ScriptableObject {
     public Sprite Screen;
     [Header("小提示")]
     public string[] prompt;
-
+    [Header("彈跳視窗講話速度")]
+    public float delay;
     public enum map
     {
         home = 0,//首頁

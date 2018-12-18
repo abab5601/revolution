@@ -26,9 +26,9 @@ MonoBehaviour:
     Mp: 50
     Mpmax: 100
   XY:
-    X: 139.1
-    Y: -0.191262
-    Z: 115.4
+    X: 141.87964
+    Y: -190606.16
+    Z: 118.089195
     map: 1
     Camera: -1.9693186
   Money:
@@ -37,6 +37,7 @@ MonoBehaviour:
     copper: 0
   talent: 0200000001000000010000000100000001000000
   chatroom: []
+  conversation: []
   Ctrl: []
   backpackMax: 15
   backpack:
