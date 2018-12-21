@@ -47,10 +47,10 @@ public class skill : MonoBehaviour {
                 cancel.SetActive(false);
                 //OK
             }
-            user.direction = vector2;
+                user.direction = vector2;
         }
         //還沒發射//輔助系統//腳色頭要轉向
-        else
+        else //if (user.but_no)
         {
             arrow.SetActive(true);
             arrow.transform.localRotation =Quaternion.Euler( new Vector3(0, Mathf.Atan2(vector2.x, vector2.y) * Mathf.Rad2Deg, 0));

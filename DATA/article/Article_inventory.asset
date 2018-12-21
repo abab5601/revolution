@@ -116,7 +116,7 @@ MonoBehaviour:
     story: "\u5B89\u5B89\u5B89\u5B89"
     time_play: 10
     text: hk4h4
-    time: 0
+    time: 10
     origin: []
     LV: 0
     Level_limit: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   - Name: "\u96F6\u5F0F/\u5341\u842C\u4F0F\u7279\u7D42\u6975\u4F0F\u7279\u72C2\u96F7\u9583\u6BC0\u6EC5\u7684\u5674\u5C04\u767D\u5149\u70AB\u98A8\u885D\u92D2\u9F8D\u6372\u98A8\u4E4B\u79D2\u6BBA\u9583\u7A7A\u5730\u7344\u6975\u6A02\u5EB7\u5B87\u3002\u596E\u529B\u6295\u64F2"
     ID: 1
     story: 
-    time_play: 0
+    time_play: 10
     text: 
     time: 0
     origin: []
