@@ -70,9 +70,9 @@ public class UI_basic_information : MonoBehaviour {
                 break;
         }//地圖
         area.text = "所在地(小範圍)";
-        XYZ.text = "座標:\n" +
+        string S= "座標:\n" +
             "X:" + user.XY.X.ToString("f3") + " Y:" + user.XY.Y.ToString("f3") + " Z:" + user.XY.Z.ToString("f3");
-
+        XYZ.text = ""+Time.deltaTime;
     }
     public void Name()
     {

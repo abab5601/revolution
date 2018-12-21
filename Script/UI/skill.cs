@@ -50,7 +50,7 @@ public class skill : MonoBehaviour {
             user.direction = vector2;
         }
         //還沒發射//輔助系統//腳色頭要轉向
-        else
+        else if(user.but_no)
         {
             arrow.SetActive(true);
             arrow.transform.localRotation =Quaternion.Euler( new Vector3(0, Mathf.Atan2(vector2.x, vector2.y) * Mathf.Rad2Deg, 0));
@@ -59,6 +59,9 @@ public class skill : MonoBehaviour {
     private void Awake()
     {
         Reset();
+        user.but_no = false;
+        user.too = false;
+        user.but = false;
     }//OK
     /// <summary>
     /// 更新
