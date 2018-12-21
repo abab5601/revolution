@@ -87,7 +87,7 @@ public class USER_initial : ScriptableObject
         public string Id/*遊戲ID*/;
         [Header("職業")]
         [Space(-10)]
-        [Header("  沒職業 = NO , warrior = 戰士 , 弓手 = Archer, 法師 = Mage, 刺客 = assassin, 槍手 = Gunman")]
+        [Header("  沒職業 = NO , warrior = 戰士 , 弓手 = Archer, 法師 = Mage, 刺客 = assassin, 槍手 = Gunmanej, 怪物 = Monster")]
         public Career Mod/*職業*/;
         [Header("等級")]
         public int LV;
@@ -109,7 +109,8 @@ public class USER_initial : ScriptableObject
         Archer = 2,
         Mage = 3,
         assassin = 4,
-        Gunman = 5
+        Gunman = 5,
+        Monster = 6
     }
     #endregion
     #region 背包
