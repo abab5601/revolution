@@ -22,7 +22,6 @@ public class Dialog : MonoBehaviour {
     void Start () {
         gameObject.SetActive(false);
         buttons.gameObject.SetActive(false);
-        home.SetActive(true);
     }
 
     // Update is called once per frame
@@ -79,6 +78,7 @@ public class Dialog : MonoBehaviour {
 
                 gameObject.SetActive(false);
             rapidBlurEffect.enabled = false;
+                home.SetActive(true);
         }
         
     }
@@ -106,21 +106,20 @@ public class Dialog : MonoBehaviour {
             DATA.RemoveAt(0);
             user.conversation = DATA.ToArray();
             CK = false;
-            home.SetActive(true);
         }
     }
 
     public void CKT()
     {
         for (int X = 0; X < button.Length; X++) if (button[X].isOn)
-        {
-            if (user.conversation[0].GameObject != null)
-                user.conversation[0].GameObject(X);
-            var DATA = new List<User.Conversation_format>(user.conversation);
-            DATA.RemoveAt(0);
-            user.conversation = DATA.ToArray();
-            CK = false;
-            home.SetActive(true);
-        }
+            {
+                Debug.Log(X);
+                if (user.conversation[0].GameObject != null)
+                    user.conversation[0].GameObject(X);
+                var DATA = new List<User.Conversation_format>(user.conversation);
+                DATA.RemoveAt(0);
+                user.conversation = DATA.ToArray();
+                CK = false;
+            }
     }
 }
