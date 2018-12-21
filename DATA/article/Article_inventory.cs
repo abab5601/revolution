@@ -85,6 +85,9 @@ public class Article_inventory : ScriptableObject {
         [Header("左手")]
         public bool left;/*左手*/
         [Space(-5)]
+        [Header("寵物")]
+        public bool pet;/*寵物*/
+        [Space(-5)]
         [Header("頭")]
         public bool head;/*頭*/
         [Space(-5)]
