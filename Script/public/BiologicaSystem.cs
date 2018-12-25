@@ -22,9 +22,8 @@ public class BiologicaSystem : MonoBehaviour {
     /// <summary>
     /// 變動血量
     /// </summary>
-    /// <param name="Attack_Type">攻擊模式</param>
     /// <param name="HP">變動血量數值</param>
-    public void hp(Article_inventory.Attack_attribute Attack_Type, int HP)
+    public void hp(int HP)
     {
 
     }
