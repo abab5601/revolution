@@ -210,4 +210,11 @@ public struct use
     {
         進戰,遠程
     }
+    [System.Serializable]
+    public enum Attack_attribute
+    {
+        physical/*物理*/, magic/*魔法*/, Direct_injury/*真傷*/
+    }
+
+
 }
