@@ -84,6 +84,17 @@ public class World : ScriptableObject {
         agile = 3,
         wisdom = 4
     }
+    public enum Tag
+    {
+        Player,
+        NPC,
+        Monster,
+        Prop,
+        building_damage,
+        building
+
+    }
+
 }
 
 
