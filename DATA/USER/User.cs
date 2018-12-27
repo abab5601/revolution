@@ -31,6 +31,8 @@ public void Jump(bool x) { jump = x; }
     #endregion
     public int skill_play;// 使用中技能
     public int skill_edit;//目前編輯道具欄
+    public int AnimPlay;//陣列位置
+    public int propL, propR;//陣列位置
     #endregion
 
 

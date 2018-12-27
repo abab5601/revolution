@@ -44,9 +44,10 @@ public class UI_skill : MonoBehaviour {
             this.anim_A.interactable = true;
             this.anim_B.interactable = true;
             anim_ID_ = Animation.FindIndex(d => d.ID == user.Anim[anim_ID].ID);
-            this.anim.text = user.Anim[anim_ID].Name == "" ?article_inventory.animation[anim_ID_].Name: user.Anim[anim_ID].Name;
-            //動畫控制器輸出ID
-            Debug.LogError("動畫控制器輸出ID");
+            this.anim.text = user.Anim[anim_ID].Name == "" ? article_inventory.animation[anim_ID_].Name : user.Anim[anim_ID].Name;
+            this.user.AnimPlay = anim_ID_;
+            user.propL = -1;
+            user.propR = -1;
         }
         else
         {
@@ -130,6 +131,8 @@ public class UI_skill : MonoBehaviour {
         if (prop_IDR != -1)
             if (user.backpack[prop_IDR].ID != article_inventory.commodity[prop_IDR_].ID || user.backpack[prop_IDR].skill != (User.Skill_)user.skill_edit + 6)
                 resat();
+        if (anim_ID == -1 && prop_IDL == -1 && prop_IDR == -1)
+            gameObject.SetActive(false);
     }//OK
     /// <summary>
     /// 動畫
@@ -187,8 +190,11 @@ public class UI_skill : MonoBehaviour {
     /// </summary>
     public void UP()
     {
+        user.AnimPlay = anim_ID_;
+        user.propL = prop_IDL_;
+        user.propR = prop_IDR_;
         UP_text.text =
-            "\n左手道具名稱 : " + this.propL.text +
+            "左手道具名稱 : " + this.propL.text +
             "\n右手道具名稱 : " + this.propR.text +
             "\n動畫名稱 : " + this.anim.text +
             "\n攻擊速度 : " + (article_inventory.animation[anim_ID_].time_play == -1f ? "目前無資料" : "" + article_inventory.animation[anim_ID_].time_play) +
@@ -199,9 +205,7 @@ public class UI_skill : MonoBehaviour {
             "動作冷卻時間 : " + article_inventory.animation[anim_ID_].time + 
             "+左手武器冷卻時間 : " + article_inventory.commodity[prop_IDL_].time+
             "+右手武器冷卻時間 : " + article_inventory.commodity[prop_IDR_].time + 
-            ")";
+            ")\n";
         UP_text_s.rectTransform.sizeDelta = new Vector2(UP_text_s.rectTransform.sizeDelta.x, UP_text_s.preferredHeight);
-
-        Debug.LogError("動畫控制器");
     }//OK
 }

@@ -40,9 +40,9 @@ public class skill : MonoBehaviour {
             {
                 user.but = false;
                 user.skill_play = -1;
-               user.skill_play = (int)Skill;
+                user.skill_play = (int)Skill;
                 Joystick.SetActive(false);
-                time = (article_inventory.commodity[prop_ID_L].time+ article_inventory.commodity[prop_ID_R].time + article_inventory.animation[anim_ID_].time);
+                time = (article_inventory.commodity[prop_ID_L].time + article_inventory.commodity[prop_ID_R].time + article_inventory.animation[anim_ID_].time);
                 user.too = true;
                 cancel.SetActive(false);
                 //OK

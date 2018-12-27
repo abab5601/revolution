@@ -26,6 +26,7 @@ public class Cast_skill : MonoBehaviour {
         //如果要放計能時執行
         if (user.skill_play != -1 && user.too)
         {
+            
             user.too = false;
             int ID = -1, Array = -1;
             var anim = new List<User.anim>(user.Anim);
@@ -56,7 +57,6 @@ public class Cast_skill : MonoBehaviour {
             Destroy(Arms_L, time + 0.5f);
             Destroy(Arms_R, time + 0.5f);
             body.SetActive(true);
-            Debug.Log(new Vector3(0, Mathf.Atan2(user.direction.x, user.direction.y) * Mathf.Rad2Deg));
             body.transform.localRotation = Quaternion.Euler(new Vector3(0, Mathf.Atan2(user.direction.x, user.direction.y) * Mathf.Rad2Deg, 0));
 
         }
@@ -71,10 +71,3 @@ public class Cast_skill : MonoBehaviour {
         
     }
 }
-
-
-
-
-
-
-
