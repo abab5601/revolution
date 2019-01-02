@@ -198,7 +198,6 @@ public class UI_skill : MonoBehaviour {
         user.AnimPlay = anim_ID_;
         user.propL = prop_IDL_;
         user.propR = prop_IDR_;
-        Debug.Log(anim_ID_);
         UP_text.text = "左手道具名稱 : " +
             (
                      prop_IDL != -1 ?
