@@ -1247,7 +1247,7 @@ MonoBehaviour:
           m_StringArgument: Account_registration
           m_BoolArgument: 1
         m_CallState: 1
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 167131272}
         m_MethodName: Scene_play
         m_Mode: 1
         m_Arguments:
