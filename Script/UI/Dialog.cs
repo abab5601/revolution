@@ -26,7 +26,7 @@ public class Dialog : MonoBehaviour {
 
     // Update is called once per frame
     private void Update () {
-        if (CK&& textGO)
+        if (CK && textGO)
         {
             if (T >= user.conversation[0].String.Length)
             {
@@ -75,14 +75,15 @@ public class Dialog : MonoBehaviour {
         }
         else if(!CK)
         {
-
-                gameObject.SetActive(false);
+            gameObject.SetActive(false);
             rapidBlurEffect.enabled = false;
-                home.SetActive(true);
         }
         
     }
-
+    private void OnDisable()
+    {
+        home.SetActive(true);
+    }
     public void OUT()
     {
         if (textGO)

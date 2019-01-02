@@ -42,7 +42,7 @@ public class UI_anim_backpack : MonoBehaviour {
             des.text = "動作分類\n";
             foreach (Article_inventory.anim anim in article_Inventory.animation[ID].anims)
             {
-                des.text += (x ? "/" : "") + anim;
+                des.text += (x ? "/" : "") +anim;
                 x = true;
             }//動作分類
             text.text = user.Anim[int.Parse(gameObject.name)].Name == "" ? article_Inventory.animation[ID].Name : user.Anim[Int32.Parse(gameObject.name)].Name;
