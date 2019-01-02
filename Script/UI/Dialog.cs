@@ -78,11 +78,14 @@ public class Dialog : MonoBehaviour {
 
                 gameObject.SetActive(false);
             rapidBlurEffect.enabled = false;
-                home.SetActive(true);
         }
         
     }
+    private void OnDisable()
+    {
+        home.SetActive(true);
 
+    }
     public void OUT()
     {
         if (textGO)

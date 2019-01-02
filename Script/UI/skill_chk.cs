@@ -17,7 +17,6 @@ public class skill_chk : MonoBehaviour {
     {
         for (x = 0; x <= 4; x++)
         {
-            Debug.Log("Start" + x);
             text[x] = buttons[x].GetComponentInChildren<Text>();
             buttons[x].interactable = user.Skill[x];
             anim[x] = -1;

@@ -21,6 +21,7 @@ public class UI_skill : MonoBehaviour {
     public Button anim_B, prop_BL, prop_BR;
     public Text UP_text, UP_text_s;
     public Button UP_Button;
+    public GameObject Object;
     /*menus順序*/
     private string[] zh = { "技能欄1", "技能欄2", "技能欄3", "技能欄4", "技能欄5"};
     #endregion
@@ -134,6 +135,10 @@ public class UI_skill : MonoBehaviour {
         if (anim_ID == -1 && prop_IDL == -1 && prop_IDR == -1)
             gameObject.SetActive(false);
     }//OK
+    private void OnDisable()
+    {
+        Object.SetActive(true);
+    }
     /// <summary>
     /// 動畫
     /// </summary>
