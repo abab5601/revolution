@@ -143,9 +143,9 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
-      Throw: 0
+      Throw: 1
       NPC: 0
   - Name: "\u760B\u9001"
     ID: 2
@@ -161,9 +161,9 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
-      Throw: 0
+      Throw: 1
       NPC: 0
   - Name: "\u6607"
     ID: 3
@@ -179,7 +179,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0

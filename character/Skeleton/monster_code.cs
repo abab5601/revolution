@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class monster_code : MonoBehaviour {
     //trackAI
-    private CharacterController con;
+    private Rigidbody con;
     public  Transform hero;
     Animator ani;
 
@@ -30,7 +30,7 @@ public class monster_code : MonoBehaviour {
 
     void Start () {
 
-        con = GetComponent<CharacterController>();
+        con = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
     }
 
@@ -39,7 +39,7 @@ public class monster_code : MonoBehaviour {
     void Update () {
 
         Think();//思考
-        //Attack();//攻击
+        Attack();//攻击
 
     }
 
@@ -64,8 +64,7 @@ public class monster_code : MonoBehaviour {
                 ani.SetInteger("Attack", 0 );
                 ani.SetInteger("Walk", 1    );
                 Vector3 dierction = transform.TransformDirection(Vector3.forward);
-                dierction.y -= 9.8f;
-                con.Move(dierction * 1f * Time.deltaTime);
+                transform.position += (dierction * 1f * Time.deltaTime);
             }
             else//小于攻击距离后开始攻击
             {
@@ -105,8 +104,7 @@ public class monster_code : MonoBehaviour {
                 //当怪物走的时间
                 ani.SetInteger("Walk", 1);
                 Vector3 direction = transform.TransformDirection(Vector3.forward);
-                direction.y -= 9.8f;
-                con.Move(direction * 1f * Time.deltaTime);
+                transform.position += (direction * 1f * Time.deltaTime);
             }
         }
 
