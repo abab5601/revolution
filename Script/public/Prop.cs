@@ -16,9 +16,9 @@ public class Prop : MonoBehaviour
     public Vector3 rotation;
     [Header("初始化大小")]
     public Vector3 size;
-    [Header("手握位置")]
+    [Header("手握位置 \"請 手動新增武器手握的位置 使用game obj\"")]
     public Transform hand;
-    [Header("模型外框")]
+    [Header("模型外框 \"請手動新增武器撿起範圍\" ")]
     public Collider Outer_frame;
     private bool/*可否開啟選單*/menu,/*是否可以放入背包*/Attack;
     private GameObject Menu_UI;

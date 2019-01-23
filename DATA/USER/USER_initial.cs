@@ -75,6 +75,12 @@ public class USER_initial : ScriptableObject
         [Header("主城市")]
         public int gold, silver, copper/*主城市*/;
 
+        public money(int v1, int v2, int v3) : this()
+        {
+            gold = v1;
+            silver = v2;
+            copper = v3;
+        }
     }
     #endregion
     #region 使用者資料

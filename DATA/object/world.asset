@@ -44,7 +44,7 @@ MonoBehaviour:
   high: 1
   high_up: 1
   high_hp: 1
-  Time: 622
+  Time: 647
   Time_x: 0.5
   NPC_MAX: 10
   NPC_GO: 10
@@ -53,3 +53,11 @@ MonoBehaviour:
   Screen: {fileID: 21300000, guid: 1bd37dfeeda5f1c4d84285d0672d1852, type: 3}
   prompt: []
   delay: 0.1
+  range: 10
+  Tag:
+  - Player
+  - ' NPC'
+  - Monster
+  - Prop
+  - building_damage
+  - building

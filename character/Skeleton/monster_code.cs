@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class monster_code : MonoBehaviour {
     //trackAI
+    private BiologicaSystem biologicaSystem;
     private Rigidbody con;
     public  Transform hero;
     Animator ani;
@@ -29,7 +30,7 @@ public class monster_code : MonoBehaviour {
 
 
     void Start () {
-
+        biologicaSystem = GetComponent<BiologicaSystem>();
         con = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
     }
@@ -37,7 +38,11 @@ public class monster_code : MonoBehaviour {
 
 
     void Update () {
-
+        if (biologicaSystem.nearby_obj.Count>0)
+        {
+            Debug.Log(biologicaSystem.nearby_obj[0]);
+            hero = biologicaSystem.nearby_obj[0];
+        }
         Think();//思考
         Attack();//攻击
 
