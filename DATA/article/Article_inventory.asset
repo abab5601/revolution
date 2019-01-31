@@ -134,7 +134,7 @@ MonoBehaviour:
     story: 
     time_play: 10
     text: 
-    time: 3
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -143,16 +143,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
-      Throw: 0
+      Throw: 1
       NPC: 0
   - Name: "\u760B\u9001"
     ID: 2
     story: 
-    time_play: 4
+    time_play: 0
     text: 
-    time: 4
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -161,16 +161,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
-      Throw: 0
+      Throw: 1
       NPC: 0
   - Name: "\u6607"
     ID: 3
     story: 
-    time_play: 2
+    time_play: 0
     text: 
-    time: 2
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -179,16 +179,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u7A7A\u9593\u653E\u7F6E"
     ID: 4
     story: 
-    time_play: 5
+    time_play: 0
     text: 
-    time: 2
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -197,16 +197,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u89E3\u653E"
     ID: 5
     story: 
-    time_play: 3
+    time_play: 0
     text: 
-    time: 3
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -215,16 +215,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u9B42\u4E4B\u5E7D\u9748\u3001\u63A8\u9001"
     ID: 6
     story: 
-    time_play: 3
+    time_play: 0
     text: 
-    time: 3
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -233,16 +233,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u9001\u4F60\u4E00\u7403"
     ID: 7
     story: 
-    time_play: 3
+    time_play: 0
     text: 
-    time: 3
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -251,16 +251,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u5BB6\u6A02\u798F\u8CB7\u4E00\u9001\u4E00"
     ID: 8
     story: 
-    time_play: 2
+    time_play: 0
     text: 
-    time: 5
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -269,16 +269,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u963F\u65AF\u5339\u6797\u9001\u4F60\u4E00\u6253\uFF0C\u4E4B\u5F8C\u8B93\u4F60\u7B11\u54C8\u54C8"
     ID: 9
     story: 
-    time_play: 2
+    time_play: 0
     text: 
-    time: 5
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -287,16 +287,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u71FC"
     ID: 10
     story: 
-    time_play: 2
+    time_play: 0
     text: 
-    time: 5
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -305,16 +305,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u9EEF\u7136\u6D88\u9B42\u3001\u75BE\u98A8\u4E4B\u5EB7\u5B87\u3001\u8FF4\u65CB\u3001\u65AC\u6BBA\u3002"
     ID: 11
     story: 
-    time_play: 1
+    time_play: 0
     text: 
-    time: 5
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -323,16 +323,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u5168\u806F\u798F\u5229\u4E2D\u5FC3\u8CB7\u4E00\u9001\u4E00"
     ID: 12
     story: 
-    time_play: 1
+    time_play: 0
     text: 
-    time: 2
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -341,16 +341,16 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0
   - Name: "\u760B\u9001"
     ID: 2
     story: 
-    time_play: 1
+    time_play: 0
     text: 
-    time: 3
+    time: 0
     origin: []
     LV: 0
     Level_limit: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
     wisdom_limit: 0
     anims: 
     place:
-      prop: 0
+      prop: 1
       Special_props: 0
       Throw: 0
       NPC: 0

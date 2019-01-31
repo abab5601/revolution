@@ -11,6 +11,7 @@ public void Jump(bool x) { jump = x; }
     public void mov0() { }
     public Ability ability;
     public bool Load;
+    public int UI;
     [Header("指向")]
     public Vector2 direction;
     [Header("跳")]

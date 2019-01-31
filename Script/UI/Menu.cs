@@ -9,8 +9,6 @@ public class Menu : MonoBehaviour
     #region 引入
     [System.Serializable]
     public class Display_backpack : UnityEvent<int> { }
-    [System.Serializable]
-    public class Display : UnityEvent<int, string, float, GameObject> { }
 
     public User user;//資料庫
     public Article_inventory article_Inventory;
@@ -21,14 +19,14 @@ public class Menu : MonoBehaviour
     public RawImage rawImage;
     public Scrollbar Bounce_Scrollbar;//彈跳介面
     public Toggle[] toggle;//0資料,1攻擊力 消耗,2故事背景,3取得處,4放入背包,5使用道具,6丟掉,7道具效果,8 null,9道具說明,10防具說明 ,11放入道具欄
-    public Toggle[] skill_button=new Toggle[14];//更新啟用狀態*控制剩餘8的啟用狀態
-    public GameObject UI, Bounce, Bounce_cancel, Bounce_determine, My_Camera, skill, lr_Windows;//背包,彈跳介面(0放入背包,1使用道具,2丟掉),彈跳介面(取消),彈跳介面(確定),攝影機,技能放置視窗,選擇左右手彈跳視窗
+    public Toggle[] skill_button = new Toggle[14];//更新啟用狀態*控制剩餘8的啟用狀態
+    public GameObject UI, Bounce, Bounce_cancel, Bounce_determine, My_Camera, skill, lr_Windows,home,home_CK;//背包,彈跳介面(0放入背包,1使用道具,2丟掉),彈跳介面(取消),彈跳介面(確定),攝影機,技能放置視窗,選擇左右手彈跳視窗
     private GameObject Object;//實體物件
     private int Array, backpack_ID = -1, Bounce_int = -1;//陣列位置,背包內Array,彈跳視窗狀態(0放入背包{可重疊},1放入背包{不可重疊},2放入背包{不放入背包})
     private User.Backpack Data;
     private User.anim Anim_Data;
     private string GameObject_name;//物品名字
-    private bool UI_bool;//背包內物品
+    private bool UI_bool, GO_Backpack;//背包內物品
     public bool anim = false;//模式切換//道具模式=true//動畫模式=false;
 
     #endregion
@@ -50,6 +48,7 @@ public class Menu : MonoBehaviour
         OnEnable();
         Reset();
         Toggle_ckicl(0);
+        GO_Backpack = true;
     }//OK
     /// <summary>
     /// 背包外
@@ -59,8 +58,10 @@ public class Menu : MonoBehaviour
     /// <param name="Consumption">剩餘耐久度</param>    
     /// <param name="Quantity"></param>
     /// <param name="gameObject">遊戲物件</param>
-    public void display(User.Backpack Data, GameObject gameObject)
+    /// <param name="backpack">可不可以放入背包</param>
+    public void display(User.Backpack Data, GameObject gameObject,bool backpack)
     {
+        GO_Backpack = backpack;
         anim = true;
         this.Data = Data;//物品Array
         var data = new List<Article_inventory.Commodity>(article_Inventory.commodity);
@@ -79,12 +80,13 @@ public class Menu : MonoBehaviour
     /// <param name="Array"></param>
     public void Anim(int Array)
     {
+        GO_Backpack = true;
         anim = false;
         this.backpack_ID = Array;
         var data = new List<Article_inventory.Animation>(article_Inventory.animation);
         this.Array = data.FindIndex(x => x.ID == user.Anim[Array].ID);
-        NAME.text = user.Anim[Array].Name == "" ? article_Inventory.animation[Array].Name : Data.Name;//物品名字
-        NAME2.text = user.Anim[Array].Name == "" ? "" : article_Inventory.animation[Array].Name;
+        NAME.text = user.Anim[Array].Name == "" ? article_Inventory.animation[this.Array].Name : user.Anim[Array].Name;//物品名字
+        NAME2.text = user.Anim[Array].Name == "" ? "" : article_Inventory.animation[this.Array].Name;
         UI_bool = true;//在背包內
         Anim_Data = user.Anim[Array];
         Reset();
@@ -93,9 +95,12 @@ public class Menu : MonoBehaviour
     /// <summary>
     /// 背包外
     /// </summary>
-    /// <param name="Array"></param>
-    public void Anim(User.anim Data, GameObject gameObject)
+    /// <param name="Data">動畫ID</param>
+    /// <param name="gameObject">動畫物件</param>
+    /// <param name="Backpack">動畫是否可以學習</param>
+    public void Anim(User.anim Data, GameObject gameObject,bool Backpack)
     {
+        GO_Backpack = Backpack;
         anim = false;
         this.backpack_ID = Array;
         var data = new List<Article_inventory.Animation>(article_Inventory.animation);
@@ -112,6 +117,7 @@ public class Menu : MonoBehaviour
     {
         toggle[0].isOn = true;
         skill.SetActive(false);
+        Bounce.SetActive(false);
     }//OK
     /// <summary>
     /// 初始化
@@ -134,7 +140,7 @@ public class Menu : MonoBehaviour
                 );//1攻擊力 消耗
             toggle[2].gameObject.SetActive(true);//2故事背景
             toggle[3].gameObject.SetActive(true);//3取得處
-            toggle[4].gameObject.SetActive(!UI_bool && article_Inventory.commodity[Array].place.backpack);//4放入背包
+            toggle[4].gameObject.SetActive(!UI_bool && article_Inventory.commodity[Array].place.backpack && GO_Backpack);//4放入背包
             toggle[5].gameObject.SetActive(article_Inventory.commodity[Array].classification == Article_inventory.Classification.Prop ||
                 article_Inventory.commodity[Array].classification == Article_inventory.Classification.food);//5使用道具
             toggle[6].gameObject.SetActive(UI_bool && article_Inventory.commodity[Array].place.Throw);//6丟掉
@@ -165,13 +171,14 @@ public class Menu : MonoBehaviour
         }//道具
         else
         {
+            user.AnimPlay = user.Anim[Array].ID;
             image.gameObject.SetActive(false);
             rawImage.gameObject.SetActive(true);
             toggle[0].gameObject.SetActive(true);//0資料
             toggle[1].gameObject.SetActive(false);
             toggle[2].gameObject.SetActive(true);//2故事背景
             toggle[3].gameObject.SetActive(true);//3取得處
-            toggle[4].gameObject.SetActive(!UI_bool && (article_Inventory.animation[Array].place.prop || article_Inventory.animation[Array].place.Special_props));//4放入背包
+            toggle[4].gameObject.SetActive(GO_Backpack && !UI_bool && (article_Inventory.animation[Array].place.prop || article_Inventory.animation[Array].place.Special_props));//4放入背包
             toggle[5].gameObject.SetActive(false);
             toggle[6].gameObject.SetActive(UI_bool && article_Inventory.animation[Array].place.Throw);//5忘記
             Throw.text = "忘記";
@@ -582,7 +589,7 @@ public class Menu : MonoBehaviour
                     user.backpack = x.ToArray();
                 }
                 GameObject game = GameObject.Instantiate(article_Inventory.commodity[Array].gameObject, new Vector3(user.XY.X, user.XY.Y, user.XY.Z + world.object_distance), new Quaternion(0, 0, 0, 0));
-                game.GetComponent<Prop>().display(new User.Backpack((NAME2.text == "" ? "" : NAME2.text), Array, Data.Consumption, (int)(Data.Quantity != 1 ? Data.Quantity * Bounce_Scrollbar.value : 1), USER_initial.Skill_.No));//儲存細項
+                game.GetComponent<Prop>().display(new User.Backpack((NAME2.text == "" ? "" : NAME2.text), Array, Data.Consumption, (int)(Data.Quantity != 1 ? Data.Quantity * Bounce_Scrollbar.value : 1), USER_initial.Skill_.No),true);//儲存細項
                 gameObject.SetActive(false);
             }//6丟掉
         }
@@ -636,7 +643,16 @@ public class Menu : MonoBehaviour
     public void OnDisable()
     {
         if (UI_bool)
+        {
             UI.SetActive(true);
+            home.SetActive(false);
+            home_CK.SetActive(true);
+        }
+        else
+        {
+            home.SetActive(false);
+            home_CK.SetActive(false);
+        }
         My_Camera.gameObject.SetActive(false);
     }
     public void open(int ID)

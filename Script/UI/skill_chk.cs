@@ -9,9 +9,10 @@ public class skill_chk : MonoBehaviour {
     public Toggle[] buttons = new Toggle[5];
     public User user;
     public Article_inventory article_inventory;
-    public int[] propR=new int[5], propL = new int[5], anim = new int[5];
+    private int[] propR=new int[5], propL = new int[5], anim = new int[5];
+    private bool[] on=new bool[5];
     private int x = 0;//更新計數用
-    public Text[] text=new Text[5];
+    private Text[] text=new Text[5];
     // Update is called once per frame
     private void Start()
     {
@@ -26,9 +27,14 @@ public class skill_chk : MonoBehaviour {
     {
 
         if (x > 4) x = 0;//計數
-
         buttons[x].interactable = user.Skill[x];
-        if (!user.Skill_op[x])text[x].text = "技能欄未開啟";
+        if (!user.Skill_op[x])
+        {
+            text[x].text = "技能欄未開啟";
+            on[x] = false;
+        }
+        else if (!on[x])
+            Reset(x);
         if (anim[x] != -1)
         {
             if (user.Anim[anim[x]].skill != (User.Skill_)x + 1)
@@ -64,7 +70,7 @@ public class skill_chk : MonoBehaviour {
     private void Reset(int x)
     {
         int i;
-
+        on[x] = true;
         #region 引入資料
         var anim = new List<User.anim>(user.Anim);
         var Animation = new List<Article_inventory.Animation>(article_inventory.animation);

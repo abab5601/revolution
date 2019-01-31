@@ -6,8 +6,6 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
 
-    private AudioSource m_AudioSource;
-
     public Prop prop;
     private void Awake()
     {
@@ -17,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        m_AudioSource = GetComponent<AudioSource>();
+
 
 
     }
@@ -29,14 +27,12 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
+
     void OnCollisionEnter(Collision collision)
     {
       if(collision.gameObject.tag=="player")
         { }
       else if(collision.gameObject.tag=="NPC")
         collision.gameObject.GetComponent<BiologicaSystem>().hp(-10);
-
-        m_AudioSource.Play();
-
     }
 }

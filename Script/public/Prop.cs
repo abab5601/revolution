@@ -16,11 +16,11 @@ public class Prop : MonoBehaviour
     public Vector3 rotation;
     [Header("初始化大小")]
     public Vector3 size;
-    [Header("手握位置")]
+    [Header("手握位置 \"請 手動新增武器手握的位置 使用game obj\"")]
     public Transform hand;
-    [Header("模型外框")]
+    [Header("模型外框 \"請手動新增武器撿起範圍\" ")]
     public Collider Outer_frame;
-    private bool/*有人使用*/menu;
+    private bool/*可否開啟選單*/menu,/*是否可以放入背包*/Attack;
     private GameObject Menu_UI;
     public User.Backpack data;
     private int USE_Rarrty = -1;
@@ -36,11 +36,15 @@ public class Prop : MonoBehaviour
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.PointerClick;
         entry.callback.AddListener((data) => { OnPointerClick((PointerEventData)data); });
-       // trigger.triggers.Add(entry);
+        // trigger.triggers.Add(entry);
 
 
-        if(Outer_frame!=null)
-            Outer_frame.enabled = false;
+        if (Outer_frame != null)
+            if(Attack)
+                Outer_frame.enabled = true;
+            else
+                Outer_frame.enabled = false;
+
         transform.localRotation = Quaternion.Euler(rotation);
         transform.localScale = size;
         transform.localPosition = new Vector3(0,0,0);
@@ -50,7 +54,6 @@ public class Prop : MonoBehaviour
             transform.localPosition = -new Vector3(vector.x * size.x, vector.y * size.y, vector.z * size.z);
         }
         Menu_UI = GameObject.Find("User/canvas/Menu");
-        // StartCoroutine("resat");
 
     }
     public void OnPointerClick(PointerEventData data)
@@ -59,8 +62,7 @@ public class Prop : MonoBehaviour
         {
             menu = true;
             Menu_UI.SetActive(true);
-            GetComponent<Menu>().display(this.data, gameObject);
-            Debug.Log("觸碰顯示UI OK");
+            GetComponent<Menu>().display(this.data, gameObject, Attack);
         }
        
     }
@@ -69,8 +71,8 @@ public class Prop : MonoBehaviour
 
         if (USE_Rarrty != -1)
         {
-         
-            user.backpack[USE_Rarrty].Consumption =this.data.Consumption;
+
+            user.backpack[USE_Rarrty] = this.data;
             if (data.Consumption == 0)//耐久=0刪掉
             {
                 var x = new List<User.Backpack>(user.backpack);
@@ -90,7 +92,9 @@ public class Prop : MonoBehaviour
     /// <summary>
     /// 開啟時update(背包外)
     /// </summary>
-    public void display(User.Backpack backpack)
+    /// <param name="backpack">DATA</param>
+    /// <param name="Attack">可否放入背包</param>
+    public void display(User.Backpack backpack,bool Attack)
     {
         data = backpack;
         this.USE_Rarrty = -1;
@@ -101,6 +105,7 @@ public class Prop : MonoBehaviour
     /// <param name="Array"></param>
     public void display(int Array)
     {
+        Attack = false;
         data = user.backpack[Array];
         USE_Rarrty = Array;
     }

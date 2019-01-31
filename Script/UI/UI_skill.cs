@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class UI_skill : MonoBehaviour {
 
     #region 宣告
@@ -20,8 +21,7 @@ public class UI_skill : MonoBehaviour {
     public Button anim_A, prop_AL, prop_AR;
     public Button anim_B, prop_BL, prop_BR;
     public Text UP_text, UP_text_s;
-    public Button UP_Button;
-    public GameObject Object;
+    public Button UP_Button,close;
     /*menus順序*/
     private string[] zh = { "技能欄1", "技能欄2", "技能欄3", "技能欄4", "技能欄5"};
     #endregion
@@ -36,7 +36,6 @@ public class UI_skill : MonoBehaviour {
         var prop = new List<USER_initial.Backpack>(user.backpack);
         var data = new List<Article_inventory.Commodity>(article_inventory.commodity);
         #endregion
-        toggle.isOn = user.Skill_op[user.skill_edit];//啟用更新
         text.text = zh[user.skill_edit];//道具欄名更新
         #region 動畫
         anim_ID = anim.FindIndex(d => d.skill == (User.Skill_)user.skill_edit+1);//尋找anim ID
@@ -46,17 +45,18 @@ public class UI_skill : MonoBehaviour {
             this.anim_B.interactable = true;
             anim_ID_ = Animation.FindIndex(d => d.ID == user.Anim[anim_ID].ID);
             this.anim.text = user.Anim[anim_ID].Name == "" ? article_inventory.animation[anim_ID_].Name : user.Anim[anim_ID].Name;
-            this.user.AnimPlay = anim_ID_;
-            user.propL = -1;
-            user.propR = -1;
+            this.user.AnimPlay = user.Anim[anim_ID].ID;
         }
         else
         {
             this.anim.text = "無放置";
             this.anim_A.interactable = false;
             this.anim_B.interactable = false;
-            //動畫控制器輸出暫著
+            user.AnimPlay = -1;
         }
+        user.propL = -1;
+        user.propR = -1;
+
         #endregion
         #region 物件
         #region 左手
@@ -67,7 +67,7 @@ public class UI_skill : MonoBehaviour {
             prop_BL.interactable = true;
             prop_IDL_ = data.FindIndex(d => d.ID == user.backpack[prop_IDL].ID);
             this.propL.text = user.backpack[prop_IDL].Name == "" ? article_inventory.commodity[prop_IDL_].Name : user.backpack[prop_IDL].Name;
-            this.prop_imgL.sprite = article_inventory.commodity[prop_IDL].image;
+            this.prop_imgL.sprite = article_inventory.commodity[prop_IDL_].image;
         }
         else
         {
@@ -75,6 +75,7 @@ public class UI_skill : MonoBehaviour {
             this.prop_imgL.sprite = null;
             this.prop_AL.interactable = false;
             this.prop_BL.interactable = false;
+            prop_IDL_ = -1;
         }
         #endregion
         #region 右手
@@ -84,8 +85,8 @@ public class UI_skill : MonoBehaviour {
             prop_AR.interactable = true;
             prop_BR.interactable = true;
             prop_IDR_ = data.FindIndex(d => d.ID == user.backpack[prop_IDR].ID);
-            this.propR.text = user.backpack[prop_IDR].Name == "" ? article_inventory.commodity[prop_IDR].Name : user.backpack[prop_IDR].Name;
-            this.prop_imgR.sprite = article_inventory.commodity[prop_IDR].image;
+            this.propR.text = user.backpack[prop_IDR].Name == "" ? article_inventory.commodity[prop_IDR_].Name : user.backpack[prop_IDR].Name;
+            this.prop_imgR.sprite = article_inventory.commodity[prop_IDR_].image;
         }
         else
         {
@@ -93,6 +94,7 @@ public class UI_skill : MonoBehaviour {
             this.prop_imgR.sprite = null;
             this.prop_AR.interactable = false;
             this.prop_BR.interactable = false;
+            prop_IDR_ = -1;
         }
         #endregion
         #endregion
@@ -116,12 +118,15 @@ public class UI_skill : MonoBehaviour {
     public void Enable()
     {
         user.Skill_op[user.skill_edit] = toggle.isOn;
+
     }//OK
     /// <summary>
     /// 檢查
     /// </summary>
     public void Update()
     {
+        if (anim_ID == -1 && prop_IDL == -1 && prop_IDR == -1)
+            close.onClick.Invoke();
         //動畫檢查
         if (anim_ID != -1)
             if (user.Anim[anim_ID].ID != article_inventory.animation[anim_ID_].ID || user.Anim[anim_ID].skill != (User.Skill_)user.skill_edit+1)
@@ -132,13 +137,7 @@ public class UI_skill : MonoBehaviour {
         if (prop_IDR != -1)
             if (user.backpack[prop_IDR].ID != article_inventory.commodity[prop_IDR_].ID || user.backpack[prop_IDR].skill != (User.Skill_)user.skill_edit + 6)
                 resat();
-        if (anim_ID == -1 && prop_IDL == -1 && prop_IDR == -1)
-            gameObject.SetActive(false);
     }//OK
-    private void OnDisable()
-    {
-        Object.SetActive(true);
-    }
     /// <summary>
     /// 動畫
     /// </summary>
@@ -153,6 +152,7 @@ public class UI_skill : MonoBehaviour {
     public void OnEnable()
     {
         resat();
+        toggle.isOn = user.Skill_op[user.skill_edit];//啟用更新
     }//OK
     /// <summary>
     /// 動畫卸下
@@ -198,19 +198,25 @@ public class UI_skill : MonoBehaviour {
         user.AnimPlay = anim_ID_;
         user.propL = prop_IDL_;
         user.propR = prop_IDR_;
-        UP_text.text =
-            "左手道具名稱 : " + this.propL.text +
-            "\n右手道具名稱 : " + this.propR.text +
-            "\n動畫名稱 : " + this.anim.text +
-            "\n攻擊速度 : " + (article_inventory.animation[anim_ID_].time_play == -1f ? "目前無資料" : "" + article_inventory.animation[anim_ID_].time_play) +
-            "\n冷卻時間 : " + (article_inventory.commodity[prop_IDL_].time + article_inventory.animation[anim_ID_].time+ article_inventory.commodity[prop_IDR_].time);
-        UP_text.rectTransform.sizeDelta = new Vector2(UP_text.rectTransform.sizeDelta.x, UP_text.preferredHeight);
-        UP_text_s.text = 
-            "\n(" +
-            "動作冷卻時間 : " + article_inventory.animation[anim_ID_].time + 
-            "+左手武器冷卻時間 : " + article_inventory.commodity[prop_IDL_].time+
-            "+右手武器冷卻時間 : " + article_inventory.commodity[prop_IDR_].time + 
-            ")\n";
+        UP_text.text = "左手道具名稱 : " +
+            (
+                     prop_IDL != -1 ?
+                     (user.backpack[prop_IDL].Name == "" ? article_inventory.commodity[prop_IDL_].Name : user.backpack[prop_IDL].Name) : "無放置") +
+            "\n右手道具名稱 : " + (
+                     prop_IDR != -1 ?
+                     (user.backpack[prop_IDR].Name == "" ? article_inventory.commodity[prop_IDR_].Name : user.backpack[prop_IDR].Name) : "無放置") +
+            "\n動畫名稱 : " + (user.Anim[anim_ID].Name == "" ? article_inventory.animation[anim_ID_].Name : user.Anim[anim_ID].Name) +
+            "\n攻擊速度 : " + (article_inventory.animation[anim_ID_].time_play == 0 ? "目前無資料" : "" + article_inventory.animation[anim_ID_].time_play) +
+            "\n冷卻時間 : " + ((prop_IDL_ != -1 ? article_inventory.commodity[prop_IDL_].time : 0) + (prop_IDR_ != -1 ? article_inventory.commodity[prop_IDR_].time : 0) + article_inventory.animation[anim_ID_].time);
+
+
+UP_text.rectTransform.sizeDelta = new Vector2(UP_text.rectTransform.sizeDelta.x, UP_text.preferredHeight);
+        UP_text_s.text =
+             "\n(" +
+             " 動作冷卻時間 : " + article_inventory.animation[anim_ID_].time +
+             " + 左手武器冷卻時間 : " + (prop_IDL_ != -1 ? article_inventory.commodity[prop_IDL_].time : 0) +
+             " + 右手武器冷卻時間 : " + (prop_IDR_ != -1 ? article_inventory.commodity[prop_IDR_].time : 0) +
+             " )\n";
         UP_text_s.rectTransform.sizeDelta = new Vector2(UP_text_s.rectTransform.sizeDelta.x, UP_text_s.preferredHeight);
     }//OK
 }

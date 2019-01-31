@@ -25,35 +25,58 @@ public class Backpack : MonoBehaviour {
     public Text mytext;
     private bool playtime;
     public Button button;
-
     public Menu.Display_backpack display_Backpack;
+    public int u;
     #endregion
     private void Start()
     {
+            if (u+"" == "0")
+                res(0);
+
+    }
+    public void res(int a)
+    {
+        u = a;
+        name = a+"";
         #region 生成物件用
-        textmax.text = "背包:" + user.backpack.Length + "/" + user.backpackMax;
-        text.text="剩餘空間:" +( user.backpackMax - user.backpack.Length);
         X = user.backpackMax / 7;
         if (user.backpackMax % 7 > 0) X += 1;
         Parent_object_2D.sizeDelta = new Vector2(Parent_object_2D.sizeDelta.x, 185 * X);
-        if (user.backpackMax > Int32.Parse(gameObject.name))
-        {
-            new_gameObject = GameObject.Instantiate(gameObject, Parent_object, false);
-            new_gameObject.name = (Int32.Parse(gameObject.name) + 1) + "";
-        
+        user.UI = u;
 
+
+
+        if (user.backpackMax > u + 1)
+        {
+
+            new_gameObject = GameObject.Instantiate(gameObject, Parent_object);
+            new_gameObject.GetComponent<Backpack>().res(u + 1);
         }
         #endregion
     }
+    private void OnEnable()
+    {
+        textmax.text = "背包:" + user.backpack.Length + "/" + user.backpackMax;
+        text.text = "剩餘空間:" + (user.backpackMax - user.backpack.Length);
+        if (playtime)
+        {
+            if (user.UI == u && user.backpackMax > u + 1)
+                res(u);
+        }
+        else playtime = true;
+    }
     public void Reset()
     {
-        if (Int32.Parse(gameObject.name) + 1 <= user.backpack.Length)
+        if (u+ 1 <= user.backpack.Length)
         {
             var data = new List<Article_inventory.Commodity>(article_Inventory.commodity);
-            arrty = data.FindIndex(i => i.ID == user.backpack[Int32.Parse(gameObject.name)].ID);
-            myImage.enabled = true;
-            myImage.sprite = article_Inventory.commodity[arrty].image;
-            if (user.backpack[Int32.Parse(gameObject.name)].Name != "") mytext.text = user.backpack[Int32.Parse(gameObject.name)].Name;
+            arrty = data.FindIndex(i => i.ID == user.backpack[u].ID);
+            if (article_Inventory.commodity[arrty].image != null)
+            {
+                myImage.enabled = true;
+                myImage.sprite = article_Inventory.commodity[arrty].image;
+            }
+            if (user.backpack[u].Name != "") mytext.text = user.backpack[u].Name;
             else mytext.text = article_Inventory.commodity[arrty].Name;
             button.interactable = true;
             if (article_Inventory.commodity[arrty].durable!=-1) image.enabled = true;
@@ -61,20 +84,20 @@ public class Backpack : MonoBehaviour {
             if (image.enabled)
             {
                 image.fillAmount =
-                    user.backpack[Int32.Parse(gameObject.name)].Consumption
+                    user.backpack[u].Consumption
                     /
                     article_Inventory.commodity[arrty].durable;
-                if (user.backpack[Int32.Parse(gameObject.name)].Consumption / article_Inventory.commodity[arrty].durable >= 0.5)
+                if (user.backpack[u].Consumption / article_Inventory.commodity[arrty].durable >= 0.5)
                     image.color =
                         Color.Lerp
                         (Color.yellow,
                         Color.green,
-                        (user.backpack[Int32.Parse(gameObject.name)].Consumption / article_Inventory.commodity[arrty].durable) - 0.5f);
+                        (user.backpack[u].Consumption / article_Inventory.commodity[arrty].durable) - 0.5f);
                 else image.color
                         = Color.Lerp
                         (Color.red,
                         Color.yellow,
-                        (user.backpack[Int32.Parse(gameObject.name)].Consumption / article_Inventory.commodity[arrty].durable) + 0.5f);
+                        (user.backpack[u].Consumption / article_Inventory.commodity[arrty].durable) + 0.5f);
 
             }
         }
@@ -90,17 +113,16 @@ public class Backpack : MonoBehaviour {
         
 
     }
-
     void Update ()
     {
-        Reset();
-        if (user.backpack.Length-1 >= Int32.Parse(gameObject.name))
+       Reset();
+        if (user.backpack.Length-1 >= u)
         {
-            if (user.backpack[Int32.Parse(gameObject.name)].Consumption <= 0 && article_Inventory.commodity[arrty].
+            if (user.backpack[u].Consumption <= 0 && article_Inventory.commodity[arrty].
                 durable!=-1)
             {
                 var temp = new List<User.Backpack>(user.backpack);
-                temp.RemoveAt(Int32.Parse(gameObject.name));
+                temp.RemoveAt(u);
                 user.backpack = temp.ToArray();
             }
         }
@@ -109,6 +131,6 @@ public class Backpack : MonoBehaviour {
     }
     public void click()
     {
-        display_Backpack.Invoke(Int32.Parse(gameObject.name));
+        display_Backpack.Invoke(u);
     }
 }

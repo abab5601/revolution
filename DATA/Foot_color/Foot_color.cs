@@ -4,46 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Foot color", menuName = "DATA/Foot_color", order = 4)]
 public class Foot_color : ScriptableObject
 {
-    public string[] Point_category_zh;
-    public string[] npc_dialogue;
-    public point[] xyz;
-    public point[] Character;
+    [Header("腳色")]
+    public Model[] model;
 
-
-
-    //
+    //生物類別
     [System.Serializable]
-    public struct point
+    public struct Model
     {
+        [Header("名字")]
         public string name;
-        public Vector3 Transform;
-
-
-
-        public Point_category Class;
-    }
-
-
-    [System.Serializable]
-    public struct Npc_dialogue
-    {
-        public int[] haha;
-        public string text;
-
-
-    }
-
-    [System.Serializable]
-    public struct character
-    {
-        public string name;
-        public GameObject NPC;
-    }
-
-
-    [System.Serializable]
-    public enum Point_category
-    {
-        no,bus, building, Landscaping
+        [Header("ID")]
+        public int ID;
+        [Header("模型物件")]
+        public  GameObject GameObject;
     }
 }

@@ -116,9 +116,10 @@ public class skill : MonoBehaviour {
     /// </summary>
     public void Update()
     {
-       
+
         //動畫檢查
-        if (user.Skill_op[(int)Skill - 1]&&user.Skill[(int)Skill - 1]) Reset();
+        if (user.Skill_op[(int)Skill - 1] && user.Skill[(int)Skill - 1]) Reset();
+        else skil_ga.SetActive(false);
         image2.fillAmount = time / (article_inventory.commodity[prop_ID_L].time+ article_inventory.commodity[prop_ID_R].time + article_inventory.animation[anim_ID_].time);
         if (time>= 0) time -= Time.deltaTime;
         if (!Joystick.active && user.but)
