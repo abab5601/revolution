@@ -1307,6 +1307,10 @@ MonoBehaviour:
   NotControl: 0
   resurrection: 0
   ResurrectionTime: 0
+  L_T: {fileID: 0}
+  R_T: {fileID: 0}
+  L_B: {fileID: 0}
+  R_B: {fileID: 0}
   nearby_obj: []
 --- !u!114 &114249240895830682
 MonoBehaviour:
