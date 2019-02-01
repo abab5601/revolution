@@ -25,7 +25,8 @@ public class Dialog : MonoBehaviour {
     }
 
     // Update is called once per frame
-    private void Update () {
+    private void Update()
+    {
         if (CK && textGO)
         {
             if (T >= user.conversation[0].String.Length)
@@ -51,7 +52,7 @@ public class Dialog : MonoBehaviour {
                 time = 0;
             }
         }
-        if (user.conversation.Count!= 0&&!CK)
+        if (user.conversation.Count != 0 && !CK)
         {
             CK = true;
             rapidBlurEffect.enabled = true;
@@ -73,19 +74,16 @@ public class Dialog : MonoBehaviour {
             //還原 . 將按鈕清空
             if (button.Length != 0) foreach (Toggle AE in button) Destroy(AE.gameObject);
         }
-        else if(!CK)
+        else if (!CK)
         {
             gameObject.SetActive(false);
             rapidBlurEffect.enabled = false;
         }
-        
-    }
-    private void OnDisable()
-    {
-        home.SetActive(true);
+
     }
     public void OUT()
     {
+        home.SetActive(true);
         if (textGO)
         {
             textGO = false;

@@ -7,7 +7,7 @@ public class WordTime : MonoBehaviour
     float Time_;
 
     public World world;
-
+    public GameObject game;
     public void Awake()
     {
         Time_ = world.Time;
