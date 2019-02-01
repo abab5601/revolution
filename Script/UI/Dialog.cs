@@ -51,7 +51,7 @@ public class Dialog : MonoBehaviour {
                 time = 0;
             }
         }
-        if (user.conversation.Length != 0&&!CK)
+        if (user.conversation.Count!= 0&&!CK)
         {
             CK = true;
             rapidBlurEffect.enabled = true;
@@ -103,9 +103,8 @@ public class Dialog : MonoBehaviour {
         }
         else
         {
-            var DATA = new List<User.Conversation_format>(user.conversation);
-            DATA.RemoveAt(0);
-            user.conversation = DATA.ToArray();
+           
+            user.conversation.RemoveAt(0);
             CK = false;
         }
     }
@@ -117,9 +116,7 @@ public class Dialog : MonoBehaviour {
                 Debug.Log(X);
                 if (user.conversation[0].GameObject != null)
                     user.conversation[0].GameObject(X);
-                var DATA = new List<User.Conversation_format>(user.conversation);
-                DATA.RemoveAt(0);
-                user.conversation = DATA.ToArray();
+                user.conversation.RemoveAt(0);
                 CK = false;
             }
     }

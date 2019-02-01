@@ -104,7 +104,9 @@ public class Prop : MonoBehaviour
     /// </summary>
     /// <param name="Quantity">數量</param>
     /// <param name="Consumption">耐久</param>
-    public void display(int Quantity,float Consumption)
+    /// <param name="money">前</param>
+    /// <param name="Name">名子</param>
+    public void display(int Quantity,float Consumption , int money,string Name)
     {
 
     }
