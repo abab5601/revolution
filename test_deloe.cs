@@ -8,7 +8,9 @@ public class test_deloe : MonoBehaviour {
     public User user;
     // Use this for initialization
 
-    void isme(int x) {
+    void isme(int x)
+    {
+        Debug.Log(x);
 
     }
     void Start() {
@@ -30,14 +32,31 @@ public class test_deloe : MonoBehaviour {
     public Color text;
     */
 
+        // 第一段
+
         user.conversation.Add(
             new USER_initial.Conversation_format(
-                "大家好",
-                null,
-                isme,
-                new string[2] { "一樓", "二樓" },
-                new Color(0,0,0,255), new Color(143, 143, 2, 255)));
-	}
+                "大家好,大中天",//顯示的字串
+                null,//圖片
+                isme,//不理他
+                new string[2] { "一樓", "二樓" },//選項
+                new Color(0,0,0,255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        //第二段
+        user.conversation.Add(
+    new USER_initial.Conversation_format(
+        "大家好,大中天22",//顯示的字串
+        null,//圖片
+        isme,//不理他
+        new string[1] { "繼續" },//選項
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+
+
+    }
+
+
 	
 	// Update is called once per frame
 	void Update () {
