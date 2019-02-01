@@ -100,6 +100,15 @@ public class Prop : MonoBehaviour
         this.USE_Rarrty = -1;
     }
     /// <summary>
+    /// 商店用
+    /// </summary>
+    /// <param name="Quantity">數量</param>
+    /// <param name="Consumption">耐久</param>
+    public void display(int Quantity,float Consumption)
+    {
+
+    }
+    /// <summary>
     /// 背包內
     /// </summary>
     /// <param name="Array"></param>
