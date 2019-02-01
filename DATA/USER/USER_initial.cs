@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "USER", menuName = "DATA/USER_initial", order = 2)]
@@ -22,7 +23,7 @@ public class USER_initial : ScriptableObject
     [Header("聊天室")]
     public string[] chatroom;
     [Header("彈跳對話框內容")]
-    public Conversation_format[] conversation;
+    public List<Conversation_format> conversation;
     [Header("狀態")]
     public control[] Ctrl;//狀態ID
     [Header("背包上限")]
@@ -226,6 +227,7 @@ public class USER_initial : ScriptableObject
     #endregion
     #region 對話  
     [System.Serializable]
+
     public struct Conversation_format
     {
         [Header("對話內容會自動加入對話框")]
@@ -242,7 +244,17 @@ public class USER_initial : ScriptableObject
         [Header("文字背景顏色")]
         public Color background;
         [Header("文字顏色")]
-        public Color text;  
+        public Color text;
+
+        public Conversation_format(string v1, Sprite p, Action<int> isme, string[] v2, Color color1, Color color2) : this()
+        {
+            this.String = v1;
+            this.sprite = p;
+            this.GameObject = isme;
+            this.Option = v2;
+            this.background = color1;
+            this.text = color2;
+        }
     }
     #endregion
     #endregion

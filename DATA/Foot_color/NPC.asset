@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bff401b0700fb45b1f3c96bc759e19, type: 3}
+  m_Name: NPC
+  m_EditorClassIdentifier: 
+  Point_category_zh:
+  - 3
+  - 
+  - 
+  npc_dialogue:
+  - "\u54C8\u645F"
+  - "\u4F60\u662F\u65B0\u4F86\u7684\u52C7\u8005\u55CE?"
+  - "\u53BB\"\u4EFB\u52D9\u5927\u6A13\"\u901B\u901B\u5427"
+  - "\u90A3\u88E1\u61C9\u8A72\u6709\u4F60\u7684\u4EFB\u52D9"
+  - "\u53BB\u5427!!"
+  xyz:
+  - name: "\u516C\u8ECA\u7AD9"
+    Transform: {x: 581.17, y: 0, z: -196.63}
+    Class: 1
+  - name: "\u83DC\u5712"
+    Transform: {x: 425.9, y: 0, z: -6}
+    Class: 1
+  - name: "\u516C\u5171\u96FB\u8A71"
+    Transform: {x: 40.66, y: 0, z: -93.19}
+    Class: 1
+  - name: "\u67EF\u57FA\u5927\u6A13\u9802\u6A13"
+    Transform: {x: -125.2489, y: 0, z: -127.4788}
+    Class: 1
+  - name: "\u932F\u8AA4\u7684STOP"
+    Transform: {x: -164.3965, y: 0, z: -222.7614}
+    Class: 1
+  - name: "\u6797\u654F\u83EF\u7684\u5BB6"
+    Transform: {x: -43.17676, y: 4.1, z: 155.1222}
+    Class: 1
+  - name: "90\u5EA6"
+    Transform: {x: -353.3, y: 28.5, z: -162.1}
+    Class: 1
+  - name: "\u5929\u6A4B"
+    Transform: {x: -60, y: 0, z: 34}
+    Class: 3
+  - name: "\u57CE\u5E02\u6D88\u9632\u6700\u5F8C\u5E0C\u671B"
+    Transform: {x: 53.53, y: -0.5614738, z: -40.69939}
+    Class: 1
+  - name: "\u8349\u76AE"
+    Transform: {x: 143, y: 0, z: -341.4568}
+    Class: 3
+  Character:
+  - name: "\u6E2C\u8A661"
+    Transform: {x: 0, y: 0, z: 0}
+    Class: 0
