@@ -83,32 +83,36 @@ public class Dialog : MonoBehaviour {
     }
     public void OUT()
     {
-        home.SetActive(true);
-        if (textGO)
+        if (button.Length == 0)
         {
-            textGO = false;
-            text.text = user.conversation[0].String;
-            if (user.conversation[0].Option.Length != 0)
+            home.SetActive(true);
+            if (textGO)
             {
-                button = new Toggle[user.conversation[0].Option.Length];
-                for (int arrty = 0; arrty < user.conversation[0].Option.Length; arrty++)
+                textGO = false;
+                text.text = user.conversation[0].String;
+                if (user.conversation[0].Option.Length != 0)
                 {
-                    button[arrty] = Instantiate(buttons, buttons.transform.parent);
-                    button[arrty].gameObject.SetActive(true);
-                    button[arrty].GetComponentsInChildren<Text>()[0].text = user.conversation[0].Option[arrty];
+                    button = new Toggle[user.conversation[0].Option.Length];
+                    for (int arrty = 0; arrty < user.conversation[0].Option.Length; arrty++)
+                    {
+                        button[arrty] = Instantiate(buttons, buttons.transform.parent);
+                        button[arrty].gameObject.SetActive(true);
+                        button[arrty].GetComponentsInChildren<Text>()[0].text = user.conversation[0].Option[arrty];
+                    }
                 }
             }
-        }
-        else
-        {
-           
-            user.conversation.RemoveAt(0);
-            CK = false;
+            else
+            {
+
+                user.conversation.RemoveAt(0);
+                CK = false;
+            }
         }
     }
 
     public void CKT()
     {
+        home.SetActive(true);
         for (int X = 0; X < button.Length; X++) if (button[X].isOn)
             {
                 Debug.Log(X);
