@@ -26,9 +26,9 @@ MonoBehaviour:
     Mp: 50
     Mpmax: 100
   XY:
-    X: 141.87962
-    Y: 0.023000121
-    Z: 118.08919
+    X: 141.87964
+    Y: 0.022000194
+    Z: 118.089195
     map: 2
     Camera: -1.9693186
   Money:
@@ -37,28 +37,7 @@ MonoBehaviour:
     copper: 0
   talent: 0200000001000000010000000100000001000000
   chatroom: []
-  conversation:
-  - String: "\u5927\u5BB6\u597D"
-    sprite: {fileID: 0}
-    Option:
-    - "\u4E00\u6A13"
-    - "\u4E8C\u6A13"
-    background: {r: 0, g: 0, b: 0, a: 255}
-    text: {r: 143, g: 143, b: 2, a: 255}
-  - String: "\u5927\u5BB6\u597D"
-    sprite: {fileID: 0}
-    Option:
-    - "\u4E00\u6A13"
-    - "\u4E8C\u6A13"
-    background: {r: 0, g: 0, b: 0, a: 255}
-    text: {r: 143, g: 143, b: 2, a: 255}
-  - String: "\u5927\u5BB6\u597D"
-    sprite: {fileID: 0}
-    Option:
-    - "\u4E00\u6A13"
-    - "\u4E8C\u6A13"
-    background: {r: 0, g: 0, b: 0, a: 255}
-    text: {r: 143, g: 143, b: 2, a: 255}
+  conversation: []
   Ctrl: []
   backpackMax: 15
   backpack:
