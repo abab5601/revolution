@@ -38,7 +38,7 @@ public interface ITask
 /// 任務達成條件格式
 /// </summary>
 [System.Serializable]
-public struct Task_Condition
+public class Task_Condition
 {
     /// <summary>
     /// 條件名
@@ -56,6 +56,15 @@ public struct Task_Condition
     /// 小圖示
     /// </summary>
     public UnityEngine.Sprite Image;
+
+
+    public Task_Condition(string Name, int Currently, int Max, Sprite Image) 
+    {
+        this.Name = Name;
+        this.Currently = Currently;
+        this.Max = Max;
+        this.Image = Image;
+    }
 }
 /// <summary>
 /// 任務_生物相關
