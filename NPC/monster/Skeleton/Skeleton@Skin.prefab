@@ -1278,9 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7d3dd1d3559f14aa657c5e2dd5df9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 11400000, guid: a7f18a82f67f51b4f82b09269a8fad54, type: 2}
   world: {fileID: 11400000, guid: f2b8bddc2c5f2854d8dbec0ca9ff6512, type: 2}
-  article_Inventory: {fileID: 11400000, guid: f58c3b07def1adc48bd18fcd89cc4ac5, type: 2}
   USER_DATA:
     Name: "\u9AB7\u9ACF"
     Id: 
@@ -1311,6 +1309,20 @@ MonoBehaviour:
   R_T: {fileID: 0}
   L_B: {fileID: 0}
   R_B: {fileID: 0}
+  ability:
+    mobile: 0
+    jump: 0
+    power: 0
+    agile: 0
+    wisdom: 0
+    Stun: 0
+  nowability:
+    mobile: 0
+    jump: 0
+    power: 0
+    agile: 0
+    wisdom: 0
+    Stun: 0
   nearby_obj: []
 --- !u!114 &114249240895830682
 MonoBehaviour:
@@ -1320,16 +1332,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495420312675050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff0c4c7a1bc2d64180f46105cb4633e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c0efdb4af3db884b8468f5cce8acdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 0}
-  followDis: 2000
-  attackDis: 3
+  followDis: 10
+  attackDis: 2
   thinkTime: 3
-  currentThinkTime: 2.9680374
+  currentThinkTime: 0
   walkTime: 5
-  currentWalkTime: 7.9553385
+  currentWalkTime: 0
   isAttact: 0
 --- !u!137 &137641331343345960
 SkinnedMeshRenderer:
