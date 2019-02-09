@@ -84,7 +84,7 @@ public class player : MonoBehaviour
         if (biologicaSystem.HP.Hp <= 0)
         {
             User.conversation.Add(
-                new USER_initial.Conversation_format("你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
+                new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
             biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
     }

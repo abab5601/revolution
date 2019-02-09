@@ -84,33 +84,32 @@ public class Dialog : MonoBehaviour {
     }
     public void OUT()
     {
-        if (button.Length == 0)
+        if (textGO)
+        {
+            textGO = false;
+            text.text = user.conversation[0].String;
+        }
+        else if (button.Length == 0)
         {
             home.SetActive(true);
-            if (textGO)
-            {
-                textGO = false;
-                text.text = user.conversation[0].String;
-            }
-            else
-            {
-
-                user.conversation.RemoveAt(0);
-                CK = false;
-            }
+            user.chatroom.Add(System.DateTime.Now.ToString("MM/dd tt hh:mm:ss")+" : "+user.conversation[0].String);
+            user.conversation.RemoveAt(0);
+            CK = false;
         }
     }
 
     public void CKT()
     {
         home.SetActive(true);
-        for (int X = 0; X < button.Length; X++) if (button[X].isOn)
+        for (int X = 0; X < button.Length; X++)
+            if (button[X].isOn)
             {
-                Debug.Log(X);
                 if (user.conversation[0].GameObject != null)
                     user.conversation[0].GameObject(X);
+                user.chatroom.Add(System.DateTime.Now.ToString("MM/dd tt hh:mm:ss") + " : " + user.conversation[0].String + " - " + user.conversation[0].String[X]);
                 user.conversation.RemoveAt(0);
                 CK = false;
+                continue;
             }
     }
 }

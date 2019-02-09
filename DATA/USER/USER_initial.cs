@@ -21,7 +21,7 @@ public class USER_initial : ScriptableObject
     [Header("移動 = 0 , 跳 = 1 , 力量 = 2 , 敏捷 = 3 , 智慧 = 4")]
     public int[] talent;
     [Header("聊天室")]
-    public string[] chatroom;
+    public List<string> chatroom;
     [Header("彈跳對話框內容")]
     public List<Conversation_format> conversation;
     [Header("狀態")]

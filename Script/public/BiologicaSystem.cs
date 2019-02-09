@@ -7,6 +7,7 @@ public class BiologicaSystem : MonoBehaviour {
     //請先設定MAX HP 
     //腳本在初始化時 生物 HP = 腳本內的MAX HP
     public World world;
+    public User user;
     public User.USER USER_DATA;
     [Header("腳色大小")]
     public Vector3 size;
@@ -80,6 +81,7 @@ public class BiologicaSystem : MonoBehaviour {
                 {
                     world.DeathNotebook.Add(gameObject.GetInstanceID());
                     Destroy(gameObject);//HP沒了死亡
+                    user.chatroom.Add(System.DateTime.Now.ToString("MM/dd tt hh:mm:ss") + " - 系統 :" + USER_DATA.Name + "已死亡");
                 }
         }
         #region 控制效果計算
