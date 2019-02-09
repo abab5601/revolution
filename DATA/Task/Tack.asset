@@ -11,8 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cff4e0dcb646b14db09488b152a91c6, type: 3}
   m_Name: Tack
   m_EditorClassIdentifier: 
-  Tasks:
-  - Name: 
-    Description: 
-    condition:
-    - 
+  time_limited:
+  - Time_limited_time: 0
+    time: []
