@@ -16,7 +16,7 @@ public class Prop : MonoBehaviour
     public Vector3 rotation;
     [Header("初始化大小")]
     public Vector3 size;
-    [Header("手握位置 \"請 手動新增武器手握的位置 使用game obj\"")]
+    [Header("手握位置 \"請手動新增武器手握的位置使用game obj\"")]
     public Transform hand;
     [Header("模型外框 \"請手動新增武器撿起範圍\" ")]
     public Collider Outer_frame;
@@ -56,6 +56,10 @@ public class Prop : MonoBehaviour
         Menu_UI = GameObject.Find("User/canvas/Menu");
 
     }
+    /// <summary>
+    /// 撿東西
+    /// </summary>
+    /// <param name="data"></param>
     public void OnPointerClick(PointerEventData data)
     {
         if (USE_Rarrty == -1)
