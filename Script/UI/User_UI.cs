@@ -26,11 +26,9 @@ public class User_UI : MonoBehaviour
     /// </summary>
     public void Chatroom_resat()
     {
-        var temp = new List<string>(user.chatroom);
-        if (user.chatroom.Length >= 100)
+        if (user.chatroom.Count >= 100)
         {
-            temp.RemoveAt(0);
-            user.chatroom = temp.ToArray();
+            user.chatroom.RemoveAt(0);
         }
         text.text = "";
         if (big)
@@ -52,10 +50,10 @@ public class User_UI : MonoBehaviour
         else if (!big)
         {
             int i;
-            if (user.chatroom.Length <= 5) { i = 0; }
-            else { i = user.chatroom.Length - 5; }
+            if (user.chatroom.Count <= 5) { i = 0; }
+            else { i = user.chatroom.Count - 5; }
 
-            while (i < user.chatroom.Length)
+            while (i < user.chatroom.Count)
             {
                 i++;
                 if (this.text.text.Length == 0)
