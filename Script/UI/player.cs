@@ -31,10 +31,13 @@ public class player : MonoBehaviour
         void Start()
     {
         anim = this.GetComponent<Animator>();
-        biologicaSystem = GetComponent<BiologicaSystem>();
     }
     private void Awake()
     {
+        biologicaSystem = GetComponent<BiologicaSystem>();
+        biologicaSystem.HP = User.Hp;
+        biologicaSystem.MP = User.Mp;
+        biologicaSystem.Control = User.Ctrl;
         // gameObject.transform.position = transfom.position;//+new Vector3(0,User.ability.jump,0);// new Vector3(User.XY.X, User.XY.Y, User.XY.Z);
     }
 
@@ -43,6 +46,7 @@ public class player : MonoBehaviour
     {
         User.Hp = biologicaSystem.HP;
         User.Mp = biologicaSystem.MP;
+        User.Ctrl = biologicaSystem.Control;
         #region 玩家位置資料庫更新
         User.XY.X = transform.position.x;
         User.XY.Y = transform.position.y;
@@ -75,7 +79,14 @@ public class player : MonoBehaviour
         #endregion
         User.ability.mobile = ((world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0];/*天賦*/
           User.ability.jump = ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * User.talent[1] + biologicaSystem.ability.jump);/*天賦*/
+        biologicaSystem.nowability.jump = User.ability.jump;
         User.ability.Stun = biologicaSystem.ability.Stun;
+        if (biologicaSystem.HP.Hp <= 0)
+        {
+            User.conversation.Add(
+                new USER_initial.Conversation_format("你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
+            biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
+        }
     }
     public void FixedUpdate()
     {
@@ -94,18 +105,9 @@ public class player : MonoBehaviour
     }
 
 
-    public void ctrl(User.control[] control)
-    {
-        var temp = new List<User.control>(User.Ctrl);
-        foreach (User.control I in control)
-            temp.Add(I);
-        User.Ctrl = temp.ToArray();
-
-    }//控制增加
 
 
 
-   
 }
 
 

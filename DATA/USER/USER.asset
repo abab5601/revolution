@@ -20,15 +20,15 @@ MonoBehaviour:
     experience: 0
     Surname: 0
   Hp:
-    Hp: -775.0001
+    Hp: 100
     Hpmax: 100
   Mp:
-    Mp: 50
-    Mpmax: 100
+    Mp: 0
+    Mpmax: 0
   XY:
-    X: 141.87964
-    Y: 0.022000194
-    Z: 118.089195
+    X: 180.8609
+    Y: 0.36053312
+    Z: 96.13103
     map: 2
     Camera: -1.9693186
   Money:
@@ -37,7 +37,12 @@ MonoBehaviour:
     copper: 0
   talent: 0200000001000000010000000100000001000000
   chatroom: []
-  conversation: []
+  conversation:
+  - String: "\u4F60\u5DF2\u6B7B\u4EA1\n\u5C07\u6703\u628A\u4F60\u6240\u6709\u9322\u6B780\u505A\u61F2\u7F70"
+    sprite: {fileID: 0}
+    Option: []
+    background: {r: 255, g: 255, b: 255, a: 255}
+    text: {r: 0, g: 0, b: 0, a: 255}
   Ctrl: []
   backpackMax: 15
   backpack:
@@ -141,7 +146,7 @@ MonoBehaviour:
   Skill: d1d1d1d1d1
   Skill_op: d1d1d1d1d1
   ability:
-    mobile: 10
+    mobile: 25
     jump: 10
     power: 0
     agile: 0
@@ -149,9 +154,9 @@ MonoBehaviour:
     Stun: 0
   Load: 0
   UI: 14
-  direction: {x: 0.9735528, y: -0.22846204}
+  direction: {x: -0.7476975, y: -0.6640395}
   jump: 0
-  but: 0
+  but: 1
   but_no: 0
   too: 0
   skill_play: -1

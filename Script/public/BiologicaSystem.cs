@@ -22,7 +22,7 @@ public class BiologicaSystem : MonoBehaviour {
     public int resurrection = 0;//復活//復活後value -= 1 // HP && MP = MAX, 控制效果會完全移除(包誇正向)
     public float ResurrectionTime ;//復活倒數時間//預設為DATA裡的值
     public Transform L_T, R_T, L_B, R_B;//左右手,左右腿
-    public User.Ability ability;
+    public User.Ability ability,nowability;
     [Header("附近物件")]
     public List<Transform> nearby_obj;
     void Start () {
@@ -37,7 +37,7 @@ public class BiologicaSystem : MonoBehaviour {
     private float high, high_up;//高
     void OnCollisionEnter(Collision collision)//碰狀
     {
-        if (high_up - high >= world.high && high_up - high >= ability.jump)
+        if (high_up - high >= world.high && high_up - high >= nowability.jump)
         {
 
             hp(-(((high_up - high - world.high) / world.high_up)) * world.high_hp);
@@ -66,7 +66,7 @@ public class BiologicaSystem : MonoBehaviour {
         #endregion
         if (HP.Hp<HP.Hpmax)
         {
-            if (HP.Hp <= 0 && tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
+            if (HP.Hp <= 0 &&tag != "Player" && tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
                 if (resurrection > 0)
                 {
                     GameObject NEW = new GameObject(name);
