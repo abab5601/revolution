@@ -33,6 +33,7 @@ public class Dialog : MonoBehaviour {
             {
                 textGO = false;
                 //生成按鈕
+                if(user.conversation[0].Option!=null)
                 if (user.conversation[0].Option.Length != 0)
                 {
                     button = new Toggle[user.conversation[0].Option.Length];
@@ -90,16 +91,6 @@ public class Dialog : MonoBehaviour {
             {
                 textGO = false;
                 text.text = user.conversation[0].String;
-                if (user.conversation[0].Option.Length != 0)
-                {
-                    button = new Toggle[user.conversation[0].Option.Length];
-                    for (int arrty = 0; arrty < user.conversation[0].Option.Length; arrty++)
-                    {
-                        button[arrty] = Instantiate(buttons, buttons.transform.parent);
-                        button[arrty].gameObject.SetActive(true);
-                        button[arrty].GetComponentsInChildren<Text>()[0].text = user.conversation[0].Option[arrty];
-                    }
-                }
             }
             else
             {
