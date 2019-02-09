@@ -7,16 +7,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Tack", menuName = "DATA/任務", order = 3)]
 public class Task : ScriptableObject
 {
+
     /// <summary>
     /// 主線任務
     /// </summary>
     [Header("主線任務清單")]
-    public List<ITask> main;
+    public List< Object > main;
     /// <summary>
     /// 支線任務
     /// </summary>
     [Header("支線任務")]
-    public List<ITask> Branch_line;
+    public List<string> Branch_line;
     /// <summary>
     /// 限時任務
     /// </summary>
@@ -28,8 +29,8 @@ public class Task : ScriptableObject
     [System.Serializable]
     public struct Time_limited
     {
-        [Header("任務腳本")]
-        public ITask Task;
+        [Header("任務腳本Class名")]
+        public string Task;
         [Header("限時任務結束倒數")]
         public float Time_limited_time;
         [Header("任務再次開始時間(24小時制 格式 : (HHmm) HH 時 mm 分)")]

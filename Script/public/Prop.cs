@@ -82,6 +82,7 @@ public class Prop : MonoBehaviour
         }
 
     }
+    
     public IEnumerator resat()
     {
         yield return new WaitForSeconds(world.object_time);
@@ -120,5 +121,4 @@ public class Prop : MonoBehaviour
         data = user.backpack[Array];
         USE_Rarrty = Array;
     }
-
 }

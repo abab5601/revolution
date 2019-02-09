@@ -6,16 +6,14 @@ public class BiologicaSystem : MonoBehaviour {
 
     //請先設定MAX HP 
     //腳本在初始化時 生物 HP = 腳本內的MAX HP
-    public User user;
     public World world;
-    public Article_inventory article_Inventory;
     public User.USER USER_DATA;
     [Header("腳色大小")]
     public Vector3 size;
     public User.HP HP;
     public User.MP MP;
     public User.money money;
-    public List<User.control> Control;
+    public User.control[] Control;
     public List<User.Backpack> Backpacks;
     public List<User.anim> Anim;
     public BoxCollider Collider;
@@ -24,6 +22,7 @@ public class BiologicaSystem : MonoBehaviour {
     public int resurrection = 0;//復活//復活後value -= 1 // HP && MP = MAX, 控制效果會完全移除(包誇正向)
     public float ResurrectionTime ;//復活倒數時間//預設為DATA裡的值
     public Transform L_T, R_T, L_B, R_B;//左右手,左右腿
+    public User.Ability ability;
     [Header("附近物件")]
     public List<Transform> nearby_obj;
     void Start () {
@@ -35,15 +34,39 @@ public class BiologicaSystem : MonoBehaviour {
         Collider.isTrigger = true;
         obj.AddComponent<BoxColliderSystem>().BiologicaSystem = gameObject.GetComponent<BiologicaSystem>();
 	}
+    private float high, high_up;//高
+    void OnCollisionEnter(Collision collision)//碰狀
+    {
+        if (high_up - high >= world.high && high_up - high >= ability.jump)
+        {
+
+            hp(-(((high_up - high - world.high) / world.high_up)) * world.high_hp);
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        #region 高度計算
+        high = transform.position.y;
+        high_up = transform.position.y;
+        #endregion
+    }
+
     private void OnEnable()
     {
         ResurrectionTime = world.ResurrectionTime;//倒計時初始化
     }
     private void Update()
     {
-        if(HP.Hp<HP.Hpmax)
+        #region 玩家跳躍高度檢查
+        if (transform.position.y > high_up)
+            high_up = transform.position.y;
+        else if (transform.position.y < high)
+            high = transform.position.y;
+
+        #endregion
+        if (HP.Hp<HP.Hpmax)
         {
-            if (HP.Hp <= 0 && tag != "Player"/*玩家*/&& tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
+            if (HP.Hp <= 0 && tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
                 if (resurrection > 0)
                 {
                     GameObject NEW = new GameObject(name);
@@ -59,6 +82,54 @@ public class BiologicaSystem : MonoBehaviour {
                     Destroy(gameObject);//HP沒了死亡
                 }
         }
+        #region 控制效果計算
+        float mobile, jump, mobile_, jump_;
+        ability.Stun = false;
+        mobile = 0f;
+        jump = 0f;
+        mobile_ = 0f;
+        jump_ = 0f;
+        for (int i = 0; i < Control.Length; i++)
+        {
+            Control[i].time -= Time.deltaTime;
+            if (Control[i].time <= 0)
+            {
+                var temp = new List<User.control>(Control);
+                temp.RemoveAt(i);
+                Control = temp.ToArray();
+                continue;
+            }
+            switch (Control[i].mod)
+            {
+                case User.MOD.mobile:
+
+                    if (Control[i].value > 0 && Control[i].value >= mobile) mobile = Control[i].value;
+                    else if (Control[i].value <= mobile_) mobile_ = Control[i].value;
+                    // if (Control[i].time < 3) Control[i].value = Control[i].value = Control[i].value *( Control[i].time/10);想做線性緩速不要瞬間時間剩3秒時慢慢把值-至0
+
+                    break;
+                case User.MOD.jump:
+
+                    if (Control[i].value > 0 && Control[i].value >= jump) jump = Control[i].value;
+                    else if (Control[i].value <= mobile_) jump_ = Control[i].value;
+
+                    break;
+                case User.MOD.Stun:
+                    ability.Stun = true;
+                    break;
+                case User.MOD.HP:
+                    hp(Control[i].value);
+                    break;
+                case User.MOD.MP:
+                    mp(Control[i].value);
+                    break;
+            }
+        }
+       ability.mobile = mobile - mobile_;
+       ability.jump = jump - jump_;
+
+
+        #endregion
     }
 
 
@@ -67,7 +138,7 @@ public class BiologicaSystem : MonoBehaviour {
     /// 變動血量
     /// </summary>
     /// <param name="HP">變動血量數值</param>
-    public void hp(int HP)
+    public void hp(float HP)
     {
         if ((!Invincible && HP < 0) || HP > 0)
             this.HP.Hp += HP;
@@ -76,7 +147,7 @@ public class BiologicaSystem : MonoBehaviour {
     /// 變動魔力
     /// </summary>
     /// <param name="HP">變動魔力數值</param>
-    public void mp(int MP)
+    public void mp(float MP)
     {
         this.MP.Mp += MP;
     }
@@ -87,11 +158,13 @@ public class BiologicaSystem : MonoBehaviour {
     /// /// <param name="OUT">增加 = true 減少 = false </param>
     public void control(List<User.control> control,bool OUT)
     {
+        List<User.control> controls = new List<USER_initial.control>(this.Control);
         if (OUT)
-            this.Control.AddRange(control);
+            controls.AddRange(control);
         else
             foreach (User.control dl in control)
-                this.Control.Remove(dl);
+                controls.Remove(dl);
+        this.Control = controls.ToArray();
     }
     /// <summary>
     /// 撿起/丟掉 物品
