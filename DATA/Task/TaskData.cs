@@ -32,7 +32,7 @@ public class TaskData : ScriptableObject
         //public UnityEngine.Sprite Image;
 
          [Header("任務進度")]
-        public string Schedule;                   //任務進度
+        public int Schedule;                   //任務進度
         //0=未完成 1=進行中 2=已完成
 
     }
@@ -55,7 +55,7 @@ public class TaskData : ScriptableObject
         // 小圖示
         //public UnityEngine.Sprite Image;
         [Header("任務進度")]
-        public string Schedule;                   //任務進度
+        public int Schedule;                   //任務進度
         //0=未完成 1=進行中 2=已完成
     }
 
@@ -78,7 +78,7 @@ public class TaskData : ScriptableObject
         // 小圖示
         //public UnityEngine.Sprite Image;
         [Header("任務進度")]
-        public string Schedule;                   //任務進度
+        public int Schedule;                   //任務進度
         //0=未完成 1=進行中 2=已完成
 
     }

@@ -46,7 +46,7 @@ public class touch : MonoBehaviour {
 
     void animcon(string name,int x) {
         anim.SetInteger(name, x);
-        if (haha = false) {
+        if (haha == false) {
             anim.SetInteger(name, x);
         }
     }
