@@ -16,10 +16,10 @@ MonoBehaviour:
     Description: "\u53BB\u8FB2\u7530\u6253\u5341\u500B\u8349\u5305\u56DE\u4F86"
     Conditions:
     - Name: "\u6253\u79AE\u5305\u9001\u8349\u5305"
-      Currently: 1
+      Currently: 0
       Max: 10
       Image: {fileID: 0}
-    Schedule: 1
+    Schedule: 2
   VT:
   - Name: 
     Description: 

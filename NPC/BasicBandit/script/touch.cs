@@ -30,15 +30,22 @@ public class touch : MonoBehaviour {
                 if (task.BT[0].Schedule == 0)
                 {
                     test.XLL(0);
+                    task.BT[0].Schedule = 1;
+                }
+                else if (task.BT[0].Conditions[0].Currently == task.BT[0].Conditions[0].Max)
+                {
+                    test.XLL(2);
+                    task.BT[0].Schedule = 2;
                 }
                 else if (task.BT[0].Schedule == 1)
                 {
                     test.XLL(1);
+                    task.BT[0].Schedule = 1;
 
                 }
-                if (task.BT[0].Schedule == 2) {
-                    test.XLL(2);
-                }
+
+
+
 
                 break;
 

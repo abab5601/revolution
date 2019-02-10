@@ -10,7 +10,7 @@ public class Kant_1 : MonoBehaviour {
     public Sprite str = null;
     int A = 0;
 
-    public void t1() {
+     void t1() {
         
         user.conversation.Add(
 new USER_initial.Conversation_format(
@@ -84,8 +84,30 @@ new string[1] { "繼續閱讀" }
 ,//選項  如果沒有選項　設為ｎｕｌｌ
 new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
 
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德(Kant) : 這是給你的獎勵",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+        win();
 
-        task.BT[0].Schedule = 2;
+
+    }
+    void win() {
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"系統 : 獲得 25000金幣 與 200經驗",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.user.experience += 200;
+        user.Money.gold += 25000;
     }
     public void XLL(int X)
     {
@@ -93,8 +115,6 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
         if (X == 0)
         {
             t1();
-            
-
         }
         else if (X == 1)
         {
