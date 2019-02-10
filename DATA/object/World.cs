@@ -72,7 +72,7 @@ public class World : ScriptableObject {
     {
         home = 0,//首頁
         Account_registration = 1,//一開始的傳送用
-        Trainingteam = 2,//初始城鎮
+        Trainingteam = 2,//主城市
         UI = 3
     };
     [System.Serializable]
