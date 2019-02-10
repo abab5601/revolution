@@ -53,44 +53,85 @@ MonoBehaviour:
       Image: {fileID: 0}
     Schedule: 0
   VT:
-  - Name: "\u66AB\u7121\u4EFB\u52D9"
-    Description: 
-    Conditions: []
+  - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+    Description: "\u96B1\u85CF\u5728\u7B2C\u4E8C\u7AE0\u6C99\u6F20\u88E1"
+    Conditions:
+    - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
-  - Name: "\u66AB\u7121\u4EFB\u52D9"
-    Description: 
-    Conditions: []
+  - Name: "\u66AB\u6642\u6C92\u6709"
+    Description: "\u96B1\u85CF\u5728\u7B2C\u4E8C\u7AE0\u6C99\u6F20\u88E1"
+    Conditions:
+    - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
-  - Name: "\u66AB\u7121\u4EFB\u52D9"
-    Description: 
-    Conditions: []
+  - Name: "\u66AB\u6642\u6C92\u6709"
+    Description: "\u96B1\u85CF\u5728\u7B2C\u4E8C\u7AE0\u6C99\u6F20\u88E1"
+    Conditions:
+    - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
-  - Name: "\u66AB\u7121\u4EFB\u52D9"
-    Description: 
-    Conditions: []
+  - Name: "\u66AB\u6642\u6C92\u6709"
+    Description: "\u96B1\u85CF\u5728\u7B2C\u4E8C\u7AE0\u6C99\u6F20\u88E1"
+    Conditions:
+    - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
-  - Name: "\u66AB\u7121\u4EFB\u52D9"
-    Description: 
-    Conditions: []
+  - Name: "\u66AB\u6642\u6C92\u6709"
+    Description: "\u96B1\u85CF\u5728\u7B2C\u4E8C\u7AE0\u6C99\u6F20\u88E1"
+    Conditions:
+    - Name: "\u627E\u5230\u746A\u9E97\u4E9E"
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
   AT:
   - Name: "\u5C1A\u672A\u958B\u653E"
     Description: 
-    Conditions: []
+    Conditions:
+    - Name: 0
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
   - Name: "\u5C1A\u672A\u958B\u653E"
     Description: 
-    Conditions: []
+    Conditions:
+    - Name: 0
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
   - Name: "\u5C1A\u672A\u958B\u653E"
     Description: 
-    Conditions: []
+    Conditions:
+    - Name: 0
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
   - Name: "\u5C1A\u672A\u958B\u653E"
     Description: 
-    Conditions: []
+    Conditions:
+    - Name: 0
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
   - Name: "\u5C1A\u672A\u958B\u653E"
     Description: 
-    Conditions: []
+    Conditions:
+    - Name: 0
+      Currently: 0
+      Max: 0
+      Image: {fileID: 0}
     Schedule: 0
+  UI_number: 0

@@ -12,7 +12,9 @@ public class TaskData : ScriptableObject
     public BosTask[] VT;
     [Header("及時任務")]
     public AnxiousTask[] AT;
-
+    [Header("UI用參數")]
+    public int UI_number;
+    //0=主線任務 1=支線任務 2=及時任務            //UI參考用
 
     [System.Serializable]
     public struct BosTask {
