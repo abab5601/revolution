@@ -66,7 +66,7 @@ public class World : ScriptableObject {
     public float ResurrectionTime;
     [Header("死亡筆記本")]
     public List<int> DeathNotebook;//紀錄已死亡者ID(unity內建實體ID)//使用 "gameObject.GetInstanceID" 可取得ID
-    [Header("依照地圖編號")]
+    [Header("出生點(\"依照地圖編號\")")]
     public Vector3[] Rebirth_point;
     public enum map
     {
