@@ -71,7 +71,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
         new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
 
 
-        task.BT[0].Schedule = 1;
+        //task.BT[0].Schedule = 1;
     }
     void t3()
     {
