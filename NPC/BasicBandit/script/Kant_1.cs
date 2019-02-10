@@ -7,24 +7,11 @@ public class Kant_1 : MonoBehaviour {
     public Sprite A_, B_, C_;
     public TaskData task;
     // Use this for initialization
-
+    public Sprite str = null;
     int A = 0;
-    public void XLL(int X)
-    {
 
-        A += X + 1;
-        string[] D = new string[0];
-        string F = "";
-        Sprite str = null;
-        switch (A)
-        {
-            case 2:
-                task.BT[0].Schedule = 1;
-                break;
-
-        }
-
-  
+    public void t1() {
+        
         user.conversation.Add(
 new USER_initial.Conversation_format(
    "康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除周邊的小怪吧",//顯示的字串
@@ -60,21 +47,66 @@ new USER_initial.Conversation_format(
        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
 
 
-                user.conversation.Add(
-   new USER_initial.Conversation_format(
-       "康德Kant : 為了訓練你先去幫我打10隻小怪吧",//顯示的字串
-       str,//圖片
-       XLL,//不理他
-       new string[2] { "接受任務" , "放棄任務" },//選項  如果沒有選項　設為ｎｕｌｌ
-       new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德Kant : 為了訓練你先去幫我打10隻小怪吧",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[2] { "接受任務", "放棄任務" },//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
+
+
+
+
+
+    }
+    void t2() {
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除周邊的小怪吧",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+        task.BT[0].Schedule = 1;
+    }
+    void t3()
+    {
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德(Kant) : 看來我很肯定你是一位非常優秀的戰士",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+        task.BT[0].Schedule = 2;
+    }
+    public void XLL(int X)
+    {
+
+        if (X == 0)
+        {
+            t1();
+            
+
+        }
+        else if (X == 1)
+        {
+            t2();
+        } if (X == 2) {
+            t3();
+        }
+        
     }
 
 
 
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }
 

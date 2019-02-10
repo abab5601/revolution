@@ -19,14 +19,14 @@ MonoBehaviour:
       Currently: 1
       Max: 10
       Image: {fileID: 0}
-    Schedule: 
+    Schedule: 1
   VT:
   - Name: 
     Description: 
     Conditions: []
-    Schedule: 
+    Schedule: 0
   AT:
   - Name: 
     Description: 
     Conditions: []
-    Schedule: 
+    Schedule: 0

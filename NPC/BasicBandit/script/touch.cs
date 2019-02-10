@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class touch : MonoBehaviour {
     Animator anim;
+    public TaskData task;
     public Kant_1 test;
+    public Kant_2 test2;
+
     Animation add;
     public int HP;
     public bool haha;
@@ -23,7 +26,20 @@ public class touch : MonoBehaviour {
         switch (collision.gameObject.name)
         {
             case "E_user__":
-                test.XLL(0);
+
+                if (task.BT[0].Schedule == 0)
+                {
+                    test.XLL(0);
+                }
+                else if (task.BT[0].Schedule == 1)
+                {
+                    test.XLL(1);
+
+                }
+                if (task.BT[0].Schedule == 2) {
+                    test.XLL(2);
+                }
+
                 break;
 
             case "FloorPlane":
