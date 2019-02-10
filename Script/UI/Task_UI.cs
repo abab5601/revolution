@@ -20,6 +20,7 @@ public class Task_UI : MonoBehaviour {
         public Text text;
     }
     #endregion
+    public UI ui;
     public TaskData taskData;
     public GameObject not, objs;
     public List<GameObject> gameObjects;
