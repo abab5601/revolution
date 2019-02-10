@@ -19,7 +19,7 @@ MonoBehaviour:
       Currently: 0
       Max: 10
       Image: {fileID: 0}
-    Schedule: 1
+    Schedule: 0
   - Name: "\u4E3B\u7DDA\u4EFB\u52D92-\u907A\u5FD8\u7684\u52C7\u58EB"
     Description: "\u524D\u5F80\u88AB\u51B0\u51CD\u7684\u6E56\u6CCA\uFF0C\u627E\u5230\"\u907A\u5FD8\u7684\u52C7\u58EB\"\u8207\u4ED6\u5C0D\u8A71"
     Conditions:
