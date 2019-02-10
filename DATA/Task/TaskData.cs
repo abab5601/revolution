@@ -32,10 +32,12 @@ public class TaskData : ScriptableObject
         //public UnityEngine.Sprite Image;
 
          [Header("任務進度")]
-        public int Schedule;                   //任務進度
+        public Schedule Schedule;                   //任務進度
         //0=未完成 1=進行中 2=已完成
 
     }
+    [System.Serializable]
+    public enum Schedule { 未完成 , 進行中 , 已完成 }
 
     [System.Serializable]
     public struct VicesTask
