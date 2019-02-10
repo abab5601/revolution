@@ -6,26 +6,19 @@ public class T1 : MonoBehaviour {
     public UnityEngine.Sprite Image;
     public TaskData task;
     public List<Task_Condition> a = new List<Task_Condition>();
+    public GameObject g;
     // Use this for initialization
     void Start () {
-        a.Add(new Task_Condition("打禮包送草包", 0, 10, Image));
+        a.Add(new Task_Condition("主線任務1-暖暖身子吧，使者", 0, 10, Image));
     }
-    public void OnCollisionEnter(Collision collision)
-    {
 
-        switch (collision.gameObject.name)
-        {
+    public void tt1() {
 
-            case "E_user__":
-
-                TaskData1 TD1 = new TaskData1("打禮包送草包", "去農田打十個草包回來", a[0]);
-                task.BT[0].Name = TD1._TaskName;
-                task.BT[0].Description = TD1._Description;
-                task.BT[0].Conditions = a;
-
-
-                break;
-        }
+        TaskData1 TD1 = new TaskData1("主線任務1-暖暖身子吧，使者", "去村莊外頭，解決掉十隻怪物。回來找康德對話", a[0]);
+        task.BT[0].Name = TD1._TaskName;
+        task.BT[0].Description = TD1._Description;
+        task.BT[0].Conditions = a;
+        Instantiate(g, new Vector3(203, 4, 193), new Quaternion(0, 90, 0, 0));
 
     }
 

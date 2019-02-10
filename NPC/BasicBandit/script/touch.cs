@@ -6,7 +6,7 @@ public class touch : MonoBehaviour {
     Animator anim;
     public TaskData task;
     public Kant_1 test;
-    public Kant_2 test2;
+    public T1 t1;
 
     Animation add;
     public int HP;
@@ -16,6 +16,7 @@ public class touch : MonoBehaviour {
 
         anim = GetComponent<Animator>();
         test = GetComponent<Kant_1>();
+        t1 = GetComponent<T1>();
         HP = 5;
     }
 
@@ -31,8 +32,10 @@ public class touch : MonoBehaviour {
                 {
                     test.XLL(0);
                     task.BT[0].Schedule = 1;
+                    t1.tt1();
+
                 }
-                else if (task.BT[0].Conditions[0].Currently == task.BT[0].Conditions[0].Max)
+                else if (task.BT[0].Conditions[0].Currently >= task.BT[0].Conditions[0].Max)
                 {
                     test.XLL(2);
                     task.BT[0].Schedule = 2;

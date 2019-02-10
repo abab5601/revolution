@@ -38,6 +38,8 @@ public class BiologicaSystem : MonoBehaviour {
     private float high, high_up;//高
     void OnCollisionEnter(Collision collision)//碰狀
     {
+
+
         if (high_up - high >= world.high && high_up - high >= nowability.jump)
         {
 

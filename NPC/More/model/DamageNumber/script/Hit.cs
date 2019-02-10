@@ -52,8 +52,8 @@ public class Hit : MonoBehaviour
 		}
 		transform.position += (Vector3.up * Time.deltaTime * speed);
 		transform.LookAt(Camera.main.transform.position);
-		
-		yellow.text = text;
+
+        yellow.text = text;
 		black.text =text;
 	}
 }

@@ -10,6 +10,7 @@ public class AnimTouchAPI : MonoBehaviour {
     public GameObject money_;
     public GameObject Atk;
     private int income;
+
     //OnCollisionEnter & OnCollisionExit;
     //passive true & false;
     Animator anim;
@@ -17,10 +18,12 @@ public class AnimTouchAPI : MonoBehaviour {
     public TaskData task;
     [Header("-----開發者選項-----")]
     public int hp;
-    public string namee;
+     public string namee;
     public User user;
+    //public BiologicaSystem BS;
     void Start()
     {
+        //BS = GetComponents<BiologicaSystem>();
         anim = GetComponent<Animator>();
         con = GetComponent<Rigidbody>();
 
@@ -41,8 +44,9 @@ public class AnimTouchAPI : MonoBehaviour {
         //anim.SetInteger(name, 0);  
     }
     public void die() {
-        Invoke("money", 3);
+
         anim.SetInteger("status", 4);
+
         Destroy(gameObject,3);
     }
     void money()

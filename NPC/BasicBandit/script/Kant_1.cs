@@ -62,13 +62,13 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
     }
     void t2() {
         user.conversation.Add(
-new USER_initial.Conversation_format(
-"康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除周邊的小怪吧",//顯示的字串
-str,//圖片
-XLL,//不理他
-new string[1] { "繼續閱讀" }
-,//選項  如果沒有選項　設為ｎｕｌｌ
-new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+        new USER_initial.Conversation_format(
+        "康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除村莊外面的小怪吧",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
 
 
         task.BT[0].Schedule = 1;
