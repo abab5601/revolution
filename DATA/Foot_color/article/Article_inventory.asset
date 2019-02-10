@@ -1,0 +1,365 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1dd0a2ae4551a469723168560773ae, type: 3}
+  m_Name: Article_inventory
+  m_EditorClassIdentifier: 
+  Classification_Zh:
+  - "\u5315\u9996"
+  - "\u722A"
+  - "\u5F13"
+  - "\u69CD"
+  - "\u6CD5\u6756"
+  - "\u5176\u4ED6"
+  - "\u528D"
+  - "\u9053\u5177"
+  - "\u98DF\u7269"
+  commodity:
+  - Name: "GM\u7528\u5916\u639B"
+    ID: 1
+    origin: []
+    story: 
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 5
+    image: {fileID: 21300000, guid: 93a62188ef4d21c469f29f0f6f1727f8, type: 3}
+    gameObject: {fileID: 1390318530897582, guid: c78d4a0efc149f547bdd6e66516ff29e,
+      type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 1
+      monster: 1
+      box: 1
+    durable: 50
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 2
+    initiative_Attack_method: 
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u6975 \u706B\u7403"
+    ID: 2
+    origin: []
+    story: 
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 5
+    image: {fileID: 21300000, guid: 2bd9ad2035fdafb44958d481179754f8, type: 3}
+    gameObject: {fileID: 1535200090336920, guid: 3520267d4c74a5042acd8177d122bc7e,
+      type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 1
+      monster: 1
+      box: 1
+    durable: 50
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 2
+    initiative_Attack_method: 
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  animation:
+  - Name: "\u96F6\u5F0F/\u5341\u842C\u4F0F\u7279\u7D42\u6975\u4F0F\u7279\u72C2\u96F7\u9583\u6BC0\u6EC5\u7684\u5674\u5C04\u767D\u5149\u70AB\u98A8\u885D\u92D2\u9F8D\u6372\u98A8\u4E4B\u79D2\u6BBA\u9583\u7A7A\u5730\u7344\u6975\u6A02\u5EB7\u5B87\u3002\u596E\u529B\u6295\u64F2"
+    ID: 0
+    story: "\u5B89\u5B89\u5B89\u5B89"
+    time_play: 10
+    text: hk4h4
+    time: 10
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 00000000
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u96F6\u5F0F/\u5341\u842C\u4F0F\u7279\u7D42\u6975\u4F0F\u7279\u72C2\u96F7\u9583\u6BC0\u6EC5\u7684\u5674\u5C04\u767D\u5149\u70AB\u98A8\u885D\u92D2\u9F8D\u6372\u98A8\u4E4B\u79D2\u6BBA\u9583\u7A7A\u5730\u7344\u6975\u6A02\u5EB7\u5B87\u3002\u596E\u529B\u6295\u64F2"
+    ID: 1
+    story: 
+    time_play: 10
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+  - Name: "\u760B\u9001"
+    ID: 2
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+  - Name: "\u6607"
+    ID: 3
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u7A7A\u9593\u653E\u7F6E"
+    ID: 4
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u89E3\u653E"
+    ID: 5
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u9B42\u4E4B\u5E7D\u9748\u3001\u63A8\u9001"
+    ID: 6
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u9001\u4F60\u4E00\u7403"
+    ID: 7
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u5BB6\u6A02\u798F\u8CB7\u4E00\u9001\u4E00"
+    ID: 8
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u963F\u65AF\u5339\u6797\u9001\u4F60\u4E00\u6253\uFF0C\u4E4B\u5F8C\u8B93\u4F60\u7B11\u54C8\u54C8"
+    ID: 9
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u71FC"
+    ID: 10
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u9EEF\u7136\u6D88\u9B42\u3001\u75BE\u98A8\u4E4B\u5EB7\u5B87\u3001\u8FF4\u65CB\u3001\u65AC\u6BBA\u3002"
+    ID: 11
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u5168\u806F\u798F\u5229\u4E2D\u5FC3\u8CB7\u4E00\u9001\u4E00"
+    ID: 12
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0
+  - Name: "\u760B\u9001"
+    ID: 2
+    story: 
+    time_play: 0
+    text: 
+    time: 0
+    origin: []
+    LV: 0
+    Level_limit: 0
+    power_limit: 0
+    agile_limit: 0
+    wisdom_limit: 0
+    anims: 
+    place:
+      prop: 1
+      Special_props: 0
+      Throw: 0
+      NPC: 0

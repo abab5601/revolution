@@ -40,7 +40,7 @@ public class player : MonoBehaviour
         biologicaSystem.HP = User.Hp;
         biologicaSystem.MP = User.Mp;
         biologicaSystem.Control = User.Ctrl;
-        // gameObject.transform.position = transfom.position;//+new Vector3(0,User.ability.jump,0);// new Vector3(User.XY.X, User.XY.Y, User.XY.Z);
+         gameObject.transform.position = world.Rebirth_point[(int)User.XY.map];//+new Vector3(0,User.ability.jump,0);// new Vector3(User.XY.X, User.XY.Y, User.XY.Z);
     }
 
 
@@ -73,6 +73,7 @@ public class player : MonoBehaviour
         {
             if (Jump == false)
             {
+                Debug.Log(true);
                 rigidbody.velocity += new Vector3(0, User.ability.jump, 0);
                 rigidbody.AddForce(Vector3.up * User.ability.jump);
                 Jump = true;
@@ -104,6 +105,7 @@ public class player : MonoBehaviour
         velocity.y = rigidbody.velocity.y;
         // 上下のキー入力でキャラクターを移動させる
         rigidbody.velocity = velocity;
+        tt = velocity;
 
         //        rigidbody.MovePosition(transform.position+( velocity * Time.fixedDeltaTime));
 
