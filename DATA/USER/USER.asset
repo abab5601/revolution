@@ -26,10 +26,10 @@ MonoBehaviour:
     Mp: 0
     Mpmax: 0
   XY:
-    X: 209.9132
-    Y: 0.026692867
-    Z: 105.30287
-    map: 2
+    X: 90.27086
+    Y: 0.36053133
+    Z: 53.9556
+    map: 1
     Camera: -1.9693186
   Money:
     gold: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     Stun: 0
   Load: 0
   UI: 14
-  direction: {x: -0.7476975, y: -0.6640395}
+  direction: {x: -0.770802, y: -0.6370747}
   jump: 0
   but: 0
   but_no: 0
