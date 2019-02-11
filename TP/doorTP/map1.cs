@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class map1 : MonoBehaviour {
 
 
-
+    public int a;
 
 
     public void OnCollisionEnter(Collision collision)
@@ -14,7 +14,8 @@ public class map1 : MonoBehaviour {
 
         if (collision.gameObject.name == "E_user__")
         {
-            SceneManager.LoadScene(2);
+            a = 2;
+            SceneManager.LoadScene(a);
 
 
         }

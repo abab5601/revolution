@@ -10,7 +10,7 @@ public class Kant_1 : MonoBehaviour {
     public Sprite str = null;
     int A = 0;
 
-     void t1() {
+    public void t1() {
         
         user.conversation.Add(
 new USER_initial.Conversation_format(
@@ -60,7 +60,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
 
 
     }
-    void t2() {
+    public void t2() {
         user.conversation.Add(
         new USER_initial.Conversation_format(
         "康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除村莊外面的小怪吧",//顯示的字串
@@ -73,7 +73,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
 
         //task.BT[0].Schedule = 1;
     }
-    void t3()
+    public void t3()
     {
         user.conversation.Add(
 new USER_initial.Conversation_format(
@@ -92,22 +92,110 @@ XLL,//不理他
 new string[1] { "繼續閱讀" }
 ,//選項  如果沒有選項　設為ｎｕｌｌ
 new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德(Kant) : 如果你有缺少資源，可以找我一直領取哦",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
         win();
 
 
     }
-    void win() {
+    public void win()
+    {
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "系統 : 獲得 25000金幣 與 200經驗",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.user.experience += 200;
+        user.Money.gold += 25000;
+
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "康德 :對了，最近周圍村子的湖都結冰了。你能去幫我調查嗎?",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+
+
+
+    }
+
+    public void win2()
+    {
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "系統 : 獲得 45000金幣 與 2543經驗",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.user.experience += 2543;
+        user.Money.gold += 45000;
+
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "康德 :回來了嗎，他說甚麼?...",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
         user.conversation.Add(
 new USER_initial.Conversation_format(
-"系統 : 獲得 25000金幣 與 200經驗",//顯示的字串
+"康德 :原來如此...，看來她最近真的很忙呢",//顯示的字串
 str,//圖片
 XLL,//不理他
 new string[1] { "繼續閱讀" }
 ,//選項  如果沒有選項　設為ｎｕｌｌ
 new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
 
-        user.user.experience += 200;
-        user.Money.gold += 25000;
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德 :原來如此...，看來她最近真的很忙呢",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+
+
+
+    }
+    public void win3()
+    {
+
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德 :甚麼事?",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+
+
+
+
     }
     public void XLL(int X)
     {
