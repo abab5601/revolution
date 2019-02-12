@@ -51,7 +51,8 @@ MonoBehaviour:
   NPC_distance: 100
   NPC_distance_MAX: 1000000
   Screen: {fileID: 21300000, guid: 1bd37dfeeda5f1c4d84285d0672d1852, type: 3}
-  prompt: []
+  prompt:
+  - "\u64CD\u4F60\u5ABD\u904A\u6232\u505A\u5230\u5FEB\u5D29\u6F70"
   delay: 0.1
   range: 10
   ResurrectionTime: 0

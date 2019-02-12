@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Transfer : MonoBehaviour {
+    [Header("玩家會面向此座標直線前進")]
     public Transform GO;
     public User User;
     public SimpleInput.AxisInput yAxis = new SimpleInput.AxisInput("Vertical");
