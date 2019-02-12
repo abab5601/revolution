@@ -63,7 +63,7 @@ MonoBehaviour:
   - {x: 95.06884, y: 6.21945, z: 56.82162}
   Tag:
   - Player
-  - ' NPC'
+  - NPC
   - Monster
   - Prop
   - building_damage
