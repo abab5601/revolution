@@ -10,7 +10,7 @@ public class UI_tas : MonoBehaviour
     //0=未完成 1=進行中 2=已完成
 
     public TaskData Td;
-    public Text[] name, text, but;
+    public Text[] Name, text, but;
     public string e;
 
 
@@ -42,7 +42,7 @@ public class UI_tas : MonoBehaviour
         for (int s = 0; s < Td.BT.Length; s++)
         {
 
-            name[s].text = Td.BT[s].Name;
+            Name[s].text = Td.BT[s].Name;
             text[s].text = Td.BT[s].Description;
 
             switch (Td.BT[s].Schedule)
@@ -65,7 +65,7 @@ public class UI_tas : MonoBehaviour
         for (int s = 0; s < Td.VT.Length; s++)
         {
 
-            name[s].text = Td.VT[s].Name;
+            Name[s].text = Td.VT[s].Name;
             text[s].text = Td.VT[s].Description;
 
             switch (Td.VT[s].Schedule)
@@ -88,7 +88,7 @@ public class UI_tas : MonoBehaviour
         for (int s = 0; s < Td.AT.Length; s++)
         {
 
-            name[s].text = Td.AT[s].Name;
+            Name[s].text = Td.AT[s].Name;
             text[s].text = Td.AT[s].Description;
 
             switch (Td.AT[s].Schedule)
