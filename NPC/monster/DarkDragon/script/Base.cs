@@ -6,59 +6,68 @@ public class Base : MonoBehaviour
 {
 
     Animator anim;
+    public TaskData taskData;
     public AnimTouchAPI animapi;
-    
+    public User user;
+    public World world;
+    public Article_inventory Article_Inventory;
+    private float Time_;
+    public BiologicaSystem bs;
     //public TaskData task;
-
+    float a = 14;
     //status: 0=休息1=走2=跑3=受傷4=死亡
     //fighting:0=休息1=攻擊2=攻擊3=攻擊
 
 
-    public void Start()
-    { 
-        AnimTouchAPI animapi = GetComponent<AnimTouchAPI>();
-    }
-
-    //tuoch code
-    public void OnCollisionEnter(Collision collision)
+    public void Update()
     {
-        //status: 0=休息1=走2=跑3=受傷4=死亡
-        Debug.Log(collision.gameObject.name);
-        switch (collision.gameObject.name)
+        if (Time_ > 0)
         {
-
-            case "E_user__":
-
-                animapi.animcon("status", 3);
-                animapi.hp--;
-                Instantiate(animapi.Atk, transform.position, new Quaternion(90, 90, 0, 0));
-                if (animapi.hp <= 0)
-                {
-                    animapi.die();
-                    animapi.task.BT[0].Conditions[0].Currently += 1;
-                }
-                break;
+            Time_ -= Time.deltaTime;
+        }
+        else
+        {
+            Time_ = 0;
+        }
+        //Debug.Log();
 
 
-            case "0(Clone)":
 
-                animapi.animcon("status", 3);
-                animapi.hp--;
-                Instantiate(animapi.Atk, transform.position, new Quaternion(90, 90, 0, 0));
-                if (animapi.hp <= 0)
-                {
-                    animapi.die();
-                }
-                break;
+    }
+    public void OnDestroy() {
+        if (world.DeathNotebook.Contains(gameObject.GetInstanceID()))
+        {
+            taskData.BT[0].Conditions[0].Currently += 1;
         }
 
+    }
+    public void Start()
+    {
+        bs = GetComponent<BiologicaSystem>();
+        AnimTouchAPI animapi = GetComponent<AnimTouchAPI>();
+    }
+    //tuoch code
+    public void OnCollisionEnter(Collision s)
+    {
+        //status: 0=休息1=走2=跑3=受傷4=死亡
         animapi.passive = true;
     }
-    public void OnCollisionExit(Collision collision)
-    {
+
+    private void OnCollisionStay(Collision s){
+
+        bs = s.gameObject.GetComponent<BiologicaSystem>();
+
+        if (bs != null && s.gameObject.tag == "Player" && Time_ == 0)
+        {
+            Time_ = 3;
+            bs.hp(-25);
+        }
+
+
         animapi.animcon("status", 0);
         animapi.passive = false;
     }
 
 }
+
 

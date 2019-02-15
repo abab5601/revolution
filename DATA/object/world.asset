@@ -56,7 +56,7 @@ MonoBehaviour:
   delay: 0.1
   range: 10
   ResurrectionTime: 0
-  DeathNotebook: 
+  DeathNotebook: 6677eeff6677eeff
   Rebirth_point:
   - {x: 0, y: 0, z: 0}
   - {x: 141.8796, y: 3.875535, z: 118.0892}

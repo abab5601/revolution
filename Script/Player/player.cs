@@ -73,7 +73,7 @@ public class player : MonoBehaviour
         {
             if (Jump == false)
             {
-                Debug.Log(true);
+
                 rigidbody.velocity += new Vector3(0, User.ability.jump, 0);
                 rigidbody.AddForce(Vector3.up * User.ability.jump);
                 Jump = true;
