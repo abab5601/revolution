@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: world
   m_EditorClassIdentifier: 
   Ability: 5
-  jump: 10
+  jump: 5
   power: 0
   agile: 0
   wisdom: 0
@@ -39,9 +39,9 @@ MonoBehaviour:
     value: 0100000001000000010000000100000001000000
   Basic:
     name: 
-    value: 1900000019000000010000000100000001000000
+    value: 0100000001000000010000000100000001000000
   Upper_limit: 15
-  high: 1
+  high: 100
   high_up: 1
   high_hp: 1
   Time: 845
