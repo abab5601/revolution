@@ -54,10 +54,12 @@ public class player : MonoBehaviour
         User.XY.Y = transform.position.y;
         User.XY.Z = transform.position.z;
         #endregion
-        
-        User.ability.mobile = ((world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0];/*天賦*/
-          User.ability.jump = ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * User.talent[1] + biologicaSystem.ability.jump);/*天賦*/
-        biologicaSystem.nowability.jump = User.ability.jump;
+        User.ability.mobile = (((User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0]* world.Ability;/*天賦*/
+
+         User.ability.jump = 
+            (
+            ((User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * world.Basic.value[1]);/*天賦*/
+        biologicaSystem.nowability.jump = User.ability.jump;    //                                                                                       10               0                         1                                         0                                                                       
         User.ability.Stun = biologicaSystem.ability.Stun;
         if (biologicaSystem.HP.Hp <= 0)
         {
