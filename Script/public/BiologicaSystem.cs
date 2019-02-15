@@ -66,6 +66,7 @@ public class BiologicaSystem : MonoBehaviour {
             high = transform.position.y;
 
         #endregion
+        #region 缺死亡判斷
         if (HP.Hp<HP.Hpmax)
         {
             if (HP.Hp <= 0 &&tag != "Player" && tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
@@ -81,10 +82,12 @@ public class BiologicaSystem : MonoBehaviour {
                 else//缺死亡判斷
                 {
                     world.DeathNotebook.Add(gameObject.GetInstanceID());
-                    Destroy(gameObject);//HP沒了死亡
                     user.chatroom.Add(System.DateTime.Now.ToString("MM/dd tt hh:mm:ss") + " - 系統 :" + USER_DATA.Name + "已死亡");
+                    world.DeathNotebook.Add(gameObject.GetInstanceID());
+                    Destroy(gameObject);//HP沒了死亡
                 }
         }
+        #endregion
         #region 控制效果計算
         float mobile, jump, mobile_, jump_;
         ability.Stun = false;
