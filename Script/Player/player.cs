@@ -17,7 +17,7 @@ public class player : MonoBehaviour
 
     int Mobile_status;
 
-    public User User;//資料庫
+    public User user;//資料庫
     public World world;
     public Article_inventory Article_i;//武器資料庫
     private bool Jump = false;//是否正在跳
@@ -37,47 +37,54 @@ public class player : MonoBehaviour
     private void Awake()
     {
         biologicaSystem = GetComponent<BiologicaSystem>();
-        biologicaSystem.HP = User.Hp;
-        biologicaSystem.MP = User.Mp;
-        biologicaSystem.Control = User.Ctrl;
-         gameObject.transform.position = world.Rebirth_point[(int)User.XY.map];//+new Vector3(0,User.ability.jump,0);// new Vector3(User.XY.X, User.XY.Y, User.XY.Z);
+        biologicaSystem.HP = user.Hp;
+        biologicaSystem.MP = user.Mp;
+        biologicaSystem.Control = user.Ctrl;
+         gameObject.transform.position = world.Rebirth_point[(int)user.XY.map];//+new Vector3(0,user.ability.jump,0);// new Vector3(user.XY.X, user.XY.Y, user.XY.Z);
     }
 
 
     void Update()
     {
-        User.Hp = biologicaSystem.HP;
-        User.Mp = biologicaSystem.MP;
-        User.Ctrl = biologicaSystem.Control;
+        if (user.user.experience >= (user.user.LV * world.LV_TO_UP) + world.LV_UP)
+        {
+            user.user.experience -= (user.user.LV * world.LV_TO_UP) + world.LV_UP;
+            user.user.LV++;
+        }
+        user.Hp = biologicaSystem.HP;
+        user.Mp = biologicaSystem.MP;
+        user.Ctrl = biologicaSystem.Control;
         #region 玩家位置資料庫更新
-        User.XY.X = transform.position.x;
-        User.XY.Y = transform.position.y;
-        User.XY.Z = transform.position.z;
+        user.XY.X = transform.position.x;
+        user.XY.Y = transform.position.y;
+        user.XY.Z = transform.position.z;
         #endregion
-        User.ability.mobile = (((User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0]* world.Ability;/*天賦*/
+        user.ability.mobile = (((user.talent[0] + world.Career[(int)user.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (user.talent[0] + world.Career[(int)user.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0]* world.Ability;/*天賦*/
 
-         User.ability.jump = 
+         user.ability.jump = 
             (
-            ((User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * world.Basic.value[1]);/*天賦*/
-        biologicaSystem.nowability.jump = User.ability.jump;    //                                                                                       10               0                         1                                         0                                                                       
-        User.ability.Stun = biologicaSystem.ability.Stun;
+            ((user.talent[1] + world.Career[(int)user.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (user.talent[1] + world.Career[(int)user.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * world.Basic.value[1]);/*天賦*/
+        biologicaSystem.nowability.jump = user.ability.jump;    //                                                                                       10               0                         1                                         0                                                                       
+        user.ability.Stun = biologicaSystem.ability.Stun;
         if (biologicaSystem.HP.Hp <= 0)
         {
-            User.conversation.Add(
+            user.conversation.Add(
                 new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
+            if (transform.position.y <= 1000)
+                transform.position =new Vector3(transform.position.x, 100,transform.position.z);
             biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
     }
     public void FixedUpdate()
     {
 
-        if (Input.GetKey(KeyCode.Space) || User.jump)
+        if (Input.GetKey(KeyCode.Space) || user.jump)
         {
             if (Jump == false)
             {
 
-                rigidbody.velocity += new Vector3(0, User.ability.jump, 0);
-                rigidbody.AddForce(Vector3.up * User.ability.jump);
+                rigidbody.velocity += new Vector3(0, user.ability.jump, 0);
+                rigidbody.AddForce(Vector3.up * user.ability.jump);
                 Jump = true;
 
             }
@@ -103,7 +110,7 @@ public class player : MonoBehaviour
                                                         // キャラクターのローカル空間での方向に変換
         velocity = transform.TransformDirection(velocity);
         //以下のvの閾値は、Mecanim側のトランジションと一緒に調整する
-        velocity *= User.ability.mobile;       // 移動速度を掛ける
+        velocity *= user.ability.mobile;       // 移動速度を掛ける
         velocity.y = rigidbody.velocity.y;
         // 上下のキー入力でキャラクターを移動させる
         rigidbody.velocity = velocity;

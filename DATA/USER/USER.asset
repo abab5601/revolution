@@ -16,8 +16,8 @@ MonoBehaviour:
     Name: vg
     Id: 
     Mod: 1
-    LV: 0
-    experience: 10000000
+    LV: 1404
+    experience: 10540
     Surname: 0
   Hp:
     Hp: 11.311962
@@ -26,9 +26,9 @@ MonoBehaviour:
     Mp: 0
     Mpmax: 0
   XY:
-    X: 104.26673
-    Y: 0.5515524
-    Z: 64.686424
+    X: 141.8796
+    Y: 0.022000194
+    Z: 118.0892
     map: 1
     Camera: -1.9693186
   Money:
@@ -166,8 +166,8 @@ MonoBehaviour:
   Skill: d1d1d1d1d1
   Skill_op: d1d1d1d1d1
   ability:
-    mobile: 0
-    jump: 0
+    mobile: 5
+    jump: 5
     power: 0
     agile: 0
     wisdom: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   but: 0
   but_no: 0
   too: 0
-  skill_play: 1
+  skill_play: -1
   skill_edit: 1
   AnimPlay: 1
   propL: 0

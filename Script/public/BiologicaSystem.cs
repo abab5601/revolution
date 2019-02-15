@@ -69,7 +69,7 @@ public class BiologicaSystem : MonoBehaviour {
         #region 缺死亡判斷
         if (HP.Hp<HP.Hpmax)
         {
-            if (HP.Hp <= 0 &&tag != "Player" && tag != "Invincible"/*無敵*/&& !Invincible)//死亡判斷
+            if (HP.Hp <= 0 &&tag != "Player" && !Invincible)//死亡判斷
                 if (resurrection > 0)
                 {
                     GameObject NEW = new GameObject(name);
@@ -87,6 +87,12 @@ public class BiologicaSystem : MonoBehaviour {
                     Destroy(gameObject);//HP沒了死亡
                 }
         }
+        if (gameObject.transform.position.y <= -1000)
+        {
+            HP.Hp = 0;
+            Invincible = false;
+        }
+
         #endregion
         #region 控制效果計算
         float mobile, jump, mobile_, jump_;

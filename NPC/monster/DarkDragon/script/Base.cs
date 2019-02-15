@@ -37,7 +37,6 @@ public class Base : MonoBehaviour
     }
     public void OnDestroy() {
 
-        Debug.Log(e);
         //Debug.Log(world.DeathNotebook.Exists(x => x == gameObject.GetInstanceID()) );
         //(this.gameObject.GetInstanceID()));
 
