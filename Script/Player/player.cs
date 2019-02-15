@@ -46,41 +46,47 @@ public class player : MonoBehaviour
 
     void Update()
     {
+        #region 玩家位置資料庫更新
         User.Hp = biologicaSystem.HP;
         User.Mp = biologicaSystem.MP;
         User.Ctrl = biologicaSystem.Control;
-        #region 玩家位置資料庫更新
         User.XY.X = transform.position.x;
         User.XY.Y = transform.position.y;
         User.XY.Z = transform.position.z;
         #endregion
-        
+        #region 玩家狀態計算
         User.ability.mobile = ((world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile) > world.Basic.value[0] ? (world.Ability * (User.talent[0] + world.Career[(int)User.user.Mod].value[0])) + biologicaSystem.ability.mobile : world.Basic.value[0];/*天賦*/
           User.ability.jump = ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (User.talent[1] + world.Career[(int)User.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * User.talent[1] + biologicaSystem.ability.jump);/*天賦*/
         biologicaSystem.nowability.jump = User.ability.jump;
         User.ability.Stun = biologicaSystem.ability.Stun;
+        #endregion
+        //死亡判斷+復活機制
         if (biologicaSystem.HP.Hp <= 0)
         {
             User.conversation.Add(
                 new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
             biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
+        //等級增加
+        if((User.user.LV * world.LV_TO_UP) + world.LV_UP <= User.user.experience)
+        {
+            User.user.experience -= (User.user.LV * world.LV_TO_UP) + world.LV_UP;
+            User.user.LV++;
+        }
     }
     public void FixedUpdate()
     {
-
+        #region 移動
         if (Input.GetKey(KeyCode.Space) || User.jump)
         {
             if (Jump == false)
             {
-                Debug.Log(true);
                 rigidbody.velocity += new Vector3(0, User.ability.jump, 0);
-                rigidbody.AddForce(Vector3.up * User.ability.jump);
                 Jump = true;
 
             }
         }
-        #region 移動
+        
         float h = SimpleInput.GetAxis("Horizontal");              // 入力デバイスの水平軸をhで定義
         float v = SimpleInput.GetAxis("Vertical");                // 入力デバイスの垂直軸をvで定義
 

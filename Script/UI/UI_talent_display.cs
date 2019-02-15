@@ -37,11 +37,11 @@ public class UI_talent_display : MonoBehaviour
         else
             image[i].color = Color.white;
         i++;
-        if (i >= image.Length - 1)
+        if (i >= image.Length)
             i = 0;
         #endregion
         text.text = Text + world.Career[(int)user.user.Mod].value[(int)ability_Menu] + "(職業加成)+" + user.talent[(int)ability_Menu];
-        button.interactable = (user.talent[0] + user.talent[1] + user.talent[2] + user.talent[3] + user.talent[4]) < user.user.LV;//判斷等級增加天賦
+        button.interactable = (user.talent[0] + user.talent[1] + user.talent[2] + user.talent[3] + user.talent[4]) < user.user.LV && user.talent[(int)ability_Menu] + world.Career[(int)user.user.Mod].value[(int)ability_Menu] < world.Upper_limit;//判斷等級增加天賦
 
     }
     /// <summary>
@@ -49,7 +49,8 @@ public class UI_talent_display : MonoBehaviour
     /// </summary>
     public void Talent_up()
     {
-        if ((user.talent[0] + user.talent[1] + user.talent[2] + user.talent[3] + user.talent[4]) < user.user.LV)//保障bug重複新增
+        if ((user.talent[0] + user.talent[1] + user.talent[2] + user.talent[3] + user.talent[4]) < user.user.LV && user.talent[(int)ability_Menu] + world.Career[(int)user.user.Mod].value[(int)ability_Menu] < world.Upper_limit)//保障bug重複新增
             user.talent[(int)ability_Menu]++;
+        i = user.talent[(int)ability_Menu];
     }
 }
