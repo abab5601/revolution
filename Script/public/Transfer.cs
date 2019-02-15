@@ -35,7 +35,7 @@ public class Transfer : MonoBehaviour {
     
     public void GO_go_point(Transform go)
     {
-
+        
         Quaternion rotation = Quaternion.LookRotation(GO.position - go.position, Vector3.zero);
         go.rotation = rotation;
         Quaternion quate = Quaternion.identity;
