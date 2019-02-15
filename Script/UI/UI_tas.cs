@@ -10,10 +10,8 @@ public class UI_tas : MonoBehaviour
     //0=未完成 1=進行中 2=已完成
 
     public TaskData Td;
-    public Text[] name, text, but;
-    public string e;
-
-
+    public Text[] haha, text, but;
+    
 
     public void Update()
     {
@@ -39,22 +37,24 @@ public class UI_tas : MonoBehaviour
     }
     void a()
     {
-        for (int i = 0; i <= 10; i++)
+        for (int x = 0; x < 5; x++)
         {
 
-            name[i].text = Td.BT[i].Name;
-            text[i].text = Td.BT[i].Description;
 
-            switch (Td.BT[i].Schedule)
+
+            haha[x].text = Td.BT[x].Name;
+            text[x].text = Td.BT[x].Description;
+
+            switch (Td.BT[x].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[x].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[x].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[x].text = "已完成";
                     break;
             }
 
@@ -62,22 +62,23 @@ public class UI_tas : MonoBehaviour
     }
     void b()
     {
-        for (int i = 0; i <= 10; i++)
+
+        for (int x = 0; x < 5; x++)
         {
 
-            name[i].text = Td.VT[i].Name;
-            text[i].text = Td.VT[i].Description;
+            haha[x].text = Td.VT[x].Name;
+            text[x].text = Td.VT[x].Description;
 
-            switch (Td.VT[i].Schedule)
+            switch (Td.VT[x].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[x].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[x].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[x].text = "已完成";
                     break;
             }
 
@@ -85,22 +86,22 @@ public class UI_tas : MonoBehaviour
     }
     void c()
     {
-        for (int i = 0; i <= 10; i++)
+        for (int x = 0; x < 5; x++)
         {
 
-            name[i].text = Td.AT[i].Name;
-            text[i].text = Td.AT[i].Description;
+            haha[x].text = Td.AT[x].Name;
+            text[x].text = Td.AT[x].Description;
 
-            switch (Td.AT[i].Schedule)
+            switch (Td.AT[x].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[x].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[x].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[x].text = "已完成";
                     break;
             }
 
