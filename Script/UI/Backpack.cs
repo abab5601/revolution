@@ -67,7 +67,7 @@ public class Backpack : MonoBehaviour {
     }
     public void Reset()
     {
-        if (u+ 1 <= user.backpack.Length)
+        if (u < user.backpack.Length)
         {
             var data = new List<Article_inventory.Commodity>(article_Inventory.commodity);
             arrty = data.FindIndex(i => i.ID == user.backpack[u].ID);
@@ -103,6 +103,7 @@ public class Backpack : MonoBehaviour {
         }
         else
         {
+            Debug.Log(true);
             myImage.enabled = false;
             mytext.text = "";
             button.interactable = false;
