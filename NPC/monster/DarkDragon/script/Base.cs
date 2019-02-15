@@ -15,6 +15,7 @@ public class Base : MonoBehaviour
     public BiologicaSystem bs;
     //public TaskData task;
     float a = 14;
+    public int e;
     //status: 0=休息1=走2=跑3=受傷4=死亡
     //fighting:0=休息1=攻擊2=攻擊3=攻擊
 
@@ -35,9 +36,14 @@ public class Base : MonoBehaviour
 
     }
     public void OnDestroy() {
-        if (world.DeathNotebook.Contains(gameObject.GetInstanceID()))
+
+        Debug.Log(e);
+        //Debug.Log(world.DeathNotebook.Exists(x => x == gameObject.GetInstanceID()) );
+        //(this.gameObject.GetInstanceID()));
+
+        if (world.DeathNotebook.Exists( x => x == e ) )
         {
-            taskData.BT[0].Conditions[0].Currently += 1;
+            taskData.BT[0].Conditions[0].Currently = 1;
         }
 
     }
@@ -45,6 +51,8 @@ public class Base : MonoBehaviour
     {
         bs = GetComponent<BiologicaSystem>();
         AnimTouchAPI animapi = GetComponent<AnimTouchAPI>();
+        e = gameObject.GetInstanceID();
+        
     }
     //tuoch code
     public void OnCollisionEnter(Collision s)

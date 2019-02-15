@@ -19,9 +19,8 @@ public class T1 : MonoBehaviour {
         task.BT[0].Description = TD1._Description;
         task.BT[0].Conditions = a;
 
-        GameObject hello = Instantiate(g, new Vector3(203, 4, 193), new Quaternion(0, 90, 0, 0));
+        Instantiate(g, new Vector3(203, 0, 193), new Quaternion(0, 90, 0, 0));
 
-        Debug.Log(hello.GetInstanceID());
 
     }
 
