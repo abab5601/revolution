@@ -62,14 +62,14 @@ public class UI_basic_information : MonoBehaviour {
             case World.map.Account_registration:
                 map.text = "地圖:重生的道路";
                 break;
-            case World.map.UI:
-                map.text = "地圖:UI測試";
+            case World.map.Map_1:
+                map.text = "地圖:第一章 : 孤軍營地";
                 break;
             case World.map.Trainingteam:
                 map.text = "地圖:中央城市";
                 break;
         }//地圖
-        area.text = "所在地(小範圍)";
+        area.text = "";
         XYZ.text = "座標:\n" +
             "X:" + user.XY.X.ToString("f3") + " Y:" + user.XY.Y.ToString("f3") + " Z:" + user.XY.Z.ToString("f3");
 

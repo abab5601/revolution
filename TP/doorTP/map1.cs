@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 public class map1 : MonoBehaviour {
 
 
-    public int a;
-
+    public SceneSwitch @object;
 
     public void OnCollisionEnter(Collision collision)
     {
 
 
-        if (collision.gameObject.name == "E_user__")
+        if (collision.gameObject.tag == "Player")
         {
-            a = 2;
-            SceneManager.LoadScene(a);
-
+            @object.gameObject.SetActive(true);
+            @object.switching(3);
 
         }
 

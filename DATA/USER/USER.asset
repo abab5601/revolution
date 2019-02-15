@@ -26,10 +26,10 @@ MonoBehaviour:
     Mp: 0
     Mpmax: 0
   XY:
-    X: 141.8796
-    Y: 0.022000194
-    Z: 118.0892
-    map: 1
+    X: 95.06884
+    Y: 5.8074303
+    Z: 56.82162
+    map: 2
     Camera: -1.9693186
   Money:
     gold: 0

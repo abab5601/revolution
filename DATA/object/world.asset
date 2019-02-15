@@ -44,7 +44,7 @@ MonoBehaviour:
   high: 1
   high_up: 1
   high_hp: 1
-  Time: 844
+  Time: 845
   Time_x: 0.5
   NPC_MAX: 10
   NPC_GO: 10
@@ -60,6 +60,7 @@ MonoBehaviour:
   Rebirth_point:
   - {x: 0, y: 0, z: 0}
   - {x: 141.8796, y: 3.875535, z: 118.0892}
+  - {x: 95.06884, y: 6.21945, z: 56.82162}
   - {x: 95.06884, y: 6.21945, z: 56.82162}
   Tag:
   - Player

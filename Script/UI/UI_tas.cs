@@ -39,22 +39,22 @@ public class UI_tas : MonoBehaviour
     }
     void a()
     {
-        for (int i = 0; i <= 10; i++)
+        for (int s = 0; s < Td.BT.Length; s++)
         {
 
-            name[i].text = Td.BT[i].Name;
-            text[i].text = Td.BT[i].Description;
+            name[s].text = Td.BT[s].Name;
+            text[s].text = Td.BT[s].Description;
 
-            switch (Td.BT[i].Schedule)
+            switch (Td.BT[s].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[s].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[s].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[s].text = "已完成";
                     break;
             }
 
@@ -62,22 +62,22 @@ public class UI_tas : MonoBehaviour
     }
     void b()
     {
-        for (int i = 0; i <= 10; i++)
+        for (int s = 0; s < Td.VT.Length; s++)
         {
 
-            name[i].text = Td.VT[i].Name;
-            text[i].text = Td.VT[i].Description;
+            name[s].text = Td.VT[s].Name;
+            text[s].text = Td.VT[s].Description;
 
-            switch (Td.VT[i].Schedule)
+            switch (Td.VT[s].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[s].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[s].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[s].text = "已完成";
                     break;
             }
 
@@ -85,22 +85,22 @@ public class UI_tas : MonoBehaviour
     }
     void c()
     {
-        for (int i = 0; i <= 10; i++)
+        for (int s = 0; s < Td.AT.Length; s++)
         {
 
-            name[i].text = Td.AT[i].Name;
-            text[i].text = Td.AT[i].Description;
+            name[s].text = Td.AT[s].Name;
+            text[s].text = Td.AT[s].Description;
 
-            switch (Td.AT[i].Schedule)
+            switch (Td.AT[s].Schedule)
             {
                 case 0:
-                    but[i].text = "未完成";
+                    but[s].text = "未完成";
                     break;
                 case 1:
-                    but[i].text = "進行中";
+                    but[s].text = "進行中";
                     break;
                 case 2:
-                    but[i].text = "已完成";
+                    but[s].text = "已完成";
                     break;
             }
 
