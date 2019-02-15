@@ -68,11 +68,8 @@ public class UI_basic_information : MonoBehaviour {
             case World.map.Trainingteam:
                 map.text = "地圖:中央城市";
                 break;
-            case World.map.Map_01:
-                map.text = "地圖:第一章-孤軍營地";
-                break;
         }//地圖
-        area.text = " ";  
+        area.text = "所在地(小範圍)";
         XYZ.text = "座標:\n" +
             "X:" + user.XY.X.ToString("f3") + " Y:" + user.XY.Y.ToString("f3") + " Z:" + user.XY.Z.ToString("f3");
 

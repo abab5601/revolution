@@ -28,10 +28,31 @@ public class tuch : MonoBehaviour {
         if (collision.gameObject.name == "E_user__")
         {
 
-            test.XLL(0);
+            if (task.BT[0].Schedule == 2)
+            {
+                //任務2
+                if (task.BT[1].Schedule == 0)
+                {
+                    test.XLL(0);
+                    task.BT[1].Schedule = 1;
 
 
+                }
+                else if (task.BT[1].Conditions[0].Currently >= task.BT[0].Conditions[0].Max)
+                {
+                    test.XLL(2);
+                    task.BT[1].Schedule = 2;
+                }
+                else if (task.BT[1].Schedule == 1)
+                {
+                    test.XLL(1);
+                    task.BT[1].Schedule = 1;
 
+                }
+            }
+            else {
+                test.dd();
+            }
         }
 
 
