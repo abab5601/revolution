@@ -24,7 +24,7 @@ MonoBehaviour:
     Description: "\u524D\u5F80\u88AB\u51B0\u51CD\u7684\u6E56\u6CCA\uFF0C\u627E\u5230\"\u907A\u5FD8\u7684\u52C7\u58EB\"\u8207\u4ED6\u5C0D\u8A71"
     Conditions:
     - Name: "\u6253\u79AE\u5305\u9001\u8349\u5305"
-      Currently: 2
+      Currently: 0
       Max: 1
       Image: {fileID: 0}
     Schedule: 0

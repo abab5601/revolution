@@ -5,12 +5,14 @@ using UnityEngine;
 public class Kant_1 : MonoBehaviour {
     public User user;
     public Sprite A_, B_, C_;
+    public Sprite str = null;
     public TaskData task;
     // Use this for initialization
-    public Sprite str = null;
+    
     int A = 0;
 
-    public void t1() {
+    //任務一
+    public void a1() {
         
         user.conversation.Add(
 new USER_initial.Conversation_format(
@@ -60,7 +62,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
 
 
     }
-    public void t2() {
+    public void a2() {
         user.conversation.Add(
         new USER_initial.Conversation_format(
         "康德(Kant) : 我必須確定你不是邪惡的門徒，你先為我們掃除村莊外面的小怪吧",//顯示的字串
@@ -73,7 +75,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));
 
         //task.BT[0].Schedule = 1;
     }
-    public void t3()
+    public void a3()
     {
         user.conversation.Add(
 new USER_initial.Conversation_format(
@@ -92,49 +94,34 @@ XLL,//不理他
 new string[1] { "繼續閱讀" }
 ,//選項  如果沒有選項　設為ｎｕｌｌ
 new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
         user.conversation.Add(
 new USER_initial.Conversation_format(
-"康德(Kant) : 如果你有缺少資源，可以找我一直領取哦",//顯示的字串
+"系統 : 獲得 25000金幣 與 200經驗",//顯示的字串
 str,//圖片
 XLL,//不理他
 new string[1] { "繼續閱讀" }
 ,//選項  如果沒有選項　設為ｎｕｌｌ
 new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-        win();
+
+
 
 
     }
-    public void win()
+
+    //任務二
+    public void b1()
     {
         user.conversation.Add(
         new USER_initial.Conversation_format(
-        "系統 : 獲得 25000金幣 與 200經驗",//顯示的字串
+        "康德 :糟糕，好像又有一群怪物出現。你能去幫我消滅它們嗎??",//顯示的字串
         str,//圖片
         XLL,//不理他
         new string[1] { "繼續閱讀" }
         ,//選項  如果沒有選項　設為ｎｕｌｌ
         new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-        user.user.experience += 200;
-        user.Money.gold += 25000;
-
-        user.conversation.Add(
-        new USER_initial.Conversation_format(
-        "康德 :對了，最近周圍村子的湖都結冰了。你能去幫我調查嗎?",//顯示的字串
-        str,//圖片
-        XLL,//不理他
-        new string[1] { "繼續閱讀" }
-        ,//選項  如果沒有選項　設為ｎｕｌｌ
-        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-
-
-
 
     }
-
-    public void win2()
+    public void b2()
     {
         user.conversation.Add(
         new USER_initial.Conversation_format(
@@ -148,69 +135,42 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
         user.user.experience += 2543;
         user.Money.gold += 45000;
 
-        user.conversation.Add(
-        new USER_initial.Conversation_format(
-        "康德 :回來了嗎，他說甚麼?...",//顯示的字串
-        str,//圖片
-        XLL,//不理他
-        new string[1] { "繼續閱讀" }
-        ,//選項  如果沒有選項　設為ｎｕｌｌ
-        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-        user.conversation.Add(
-new USER_initial.Conversation_format(
-"康德 :原來如此...，看來她最近真的很忙呢",//顯示的字串
-str,//圖片
-XLL,//不理他
-new string[1] { "繼續閱讀" }
-,//選項  如果沒有選項　設為ｎｕｌｌ
-new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-        user.conversation.Add(
-new USER_initial.Conversation_format(
-"康德 :原來如此...，看來她最近真的很忙呢",//顯示的字串
-str,//圖片
-XLL,//不理他
-new string[1] { "繼續閱讀" }
-,//選項  如果沒有選項　設為ｎｕｌｌ
-new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-
-
-
-
     }
-    public void win3()
-    {
-
-        user.conversation.Add(
-new USER_initial.Conversation_format(
-"康德 :甚麼事?",//顯示的字串
-str,//圖片
-XLL,//不理他
-new string[1] { "繼續閱讀" }
-,//選項  如果沒有選項　設為ｎｕｌｌ
-new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
-
-
-
-
-
-    }
+    
+    // 0 = 未完成對話 1 = 進行中 2 = 獎勵時間
     public void XLL(int X)
     {
+        switch (X) {
+            case 0:
+                a1();
+                break;
+            case 1:
 
-        if (X == 0)
-        {
-            t1();
+                a2();
+                break;
+            case 2:
+                a3();
+                break;
+
         }
-        else if (X == 1)
-        {
-            t2();
-        } if (X == 2) {
-            t3();
-        }
+
         
+    }
+    public void XLL2(int X)
+    {
+        switch (X)
+        {
+            case 0:
+                b1();
+                break;
+            case 1:
+
+                b2();
+                break;
+
+        }
+
+
     }
 
 

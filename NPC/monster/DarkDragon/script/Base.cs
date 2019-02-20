@@ -15,7 +15,10 @@ public class Base : MonoBehaviour
     public BiologicaSystem bs;
     //public TaskData task;
     float a = 14;
+    [Header("-----第x任務-----")]
     public int e;
+    [Header("-----給予多少單位-----")]
+    public int t;
     //status: 0=休息1=走2=跑3=受傷4=死亡
     //fighting:0=休息1=攻擊2=攻擊3=攻擊
 
@@ -42,7 +45,7 @@ public class Base : MonoBehaviour
 
         if (world.DeathNotebook.Exists( x => x == e ) )
         {
-            taskData.BT[0].Conditions[0].Currently = 1;
+            taskData.BT[e].Conditions[0].Currently = t;
         }
 
     }

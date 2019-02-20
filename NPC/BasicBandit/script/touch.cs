@@ -29,46 +29,55 @@ public class touch : MonoBehaviour {
         {
             case "E_user__":
                 
-
-                    //任務1
-                    if (task.BT[0].Schedule == 0)
+                //任務1
+                if (task.BT[0].Schedule == 0)
                     {
                         test.XLL(0);
                         task.BT[0].Schedule = 1;
-                        t1.tt1();
+                        t1.a1_new_most();
 
-                    }
-                    else if (task.BT[0].Conditions[0].Currently >= task.BT[0].Conditions[0].Max)
+                }//沒接任務
+                else if (task.BT[0].Conditions[0].Currently >= task.BT[0].Conditions[0].Max && task.BT[0].Schedule == 1)
                     {
-                        test.XLL(2);
-                        task.BT[0].Schedule = 2;
 
-                }
-                    else if (task.BT[0].Schedule == 1)
+                        test.XLL(2);
+                        task.BT[0].Schedule = 2;//完成
+
+                }//交替任務
+                else if (task.BT[0].Schedule == 1)
                     {
                         test.XLL(1);
                         task.BT[0].Schedule = 1;
+                }//進行中
+
+                //任務1 要先完成才能執行 任務2
+                if (task.BT[0].Schedule == 2)
+                    {
+                    if (task.BT[1].Schedule == 0)
+                        {
+                        test.XLL2(0);
+                        task.BT[1].Schedule = 1;
+                            t1.a1_new_most();
+
+                    }//沒接任務
+                    else if (task.BT[1].Conditions[0].Currently >= task.BT[1].Conditions[0].Max && task.BT[1].Schedule == 1)
+                        {
+                        test.XLL2(2);
+                        task.BT[1].Schedule = 2;//完成
 
 
-                    }
 
-                if (task.BT[1].Schedule >= 2)
-                {
-                    test.win2();
-                    haha = true;
-                } else if (haha ==true) {
-                    test.win3();
-                }
+                    }//交替任務
+                    else if (task.BT[0].Schedule == 1)
+                        {
+                        test.XLL2(1);
+                        task.BT[1].Schedule = 1;
+                    }//進行中
 
-                
+                     }
 
 
-
-
-
-
-
-                    break;
+                break;
 
             case "FloorPlane":
                 animcon("status", 3);
