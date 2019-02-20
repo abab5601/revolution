@@ -150,7 +150,7 @@ public class Menu : MonoBehaviour
             toggle[9].gameObject.SetActive(article_Inventory.commodity[Array].classification == Article_inventory.Classification.Prop ||
             article_Inventory.commodity[Array].classification == Article_inventory.Classification.food);//9道具說明
             toggle[10].gameObject.SetActive(article_Inventory.commodity[Array].classification == Article_inventory.Classification.head ||
-                article_Inventory.commodity[Array].classification == Article_inventory.Classification.body ||
+                article_Inventory.commodity[Array].classification == Article_inventory.Classification.body ||  
                 article_Inventory.commodity[Array].classification == Article_inventory.Classification.leg ||
                 article_Inventory.commodity[Array].classification == Article_inventory.Classification.foot);//10防具說明
             toggle[11].gameObject.SetActive(UI_bool &&
@@ -363,6 +363,7 @@ public class Menu : MonoBehaviour
                     #endregion
                     #region 11 放入道具欄
                     case 11:
+
                         skill.SetActive(true);
                         Description.transform.parent.gameObject.SetActive(false);
                         skill_button[1].interactable = article_Inventory.commodity[Array].place.left;
