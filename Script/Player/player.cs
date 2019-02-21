@@ -33,14 +33,24 @@ public class player : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
-    }
-    private void Awake()
-    {
-        biologicaSystem = GetComponent<BiologicaSystem>();
+        do
+        {
+            biologicaSystem = GetComponent<BiologicaSystem>();
+            Debug.Log(true);
+        } while (biologicaSystem == null);
+
+
+
         biologicaSystem.HP = user.Hp;
         biologicaSystem.MP = user.Mp;
         biologicaSystem.Control = user.Ctrl;
-         gameObject.transform.position = world.Rebirth_point[(int)user.XY.map];//+new Vector3(0,user.ability.jump,0);// new Vector3(user.XY.X, user.XY.Y, user.XY.Z);
+
+    }
+    private void Awake()
+    {
+        gameObject.transform.position = world.Rebirth_point[(int)user.XY.map];//+new Vector3(0,user.ability.jump,0);// new Vector3(user.XY.X, user.XY.Y, user.XY.Z);
+        
+     
     }
 
 
@@ -66,12 +76,23 @@ public class player : MonoBehaviour
             ((user.talent[1] + world.Career[(int)user.user.Mod].value[1])) + biologicaSystem.ability.jump) > world.Basic.value[1] ? ((world.jump * (user.talent[1] + world.Career[(int)user.user.Mod].value[1])) + biologicaSystem.ability.jump) : (world.jump * world.Basic.value[1]);/*天賦*/
         biologicaSystem.nowability.jump = user.ability.jump;    //                                                                                       10               0                         1                                         0                                                                       
         user.ability.Stun = biologicaSystem.ability.Stun;
+        if (transform.position.y <= -1000)
+        {
+            transform.position = world.Rebirth_point[(int)user.XY.map];
+            
+        }
         if (biologicaSystem.HP.Hp <= 0)
         {
-            user.conversation.Add(
-                new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
-            if (transform.position.y <= 1000)
-                transform.position =new Vector3(transform.position.x, 100,transform.position.z);
+            if (user.conversation.Count != 0) {
+                if (user.conversation[0].String != "系統 : 你已死亡\n將會把你所有錢歸0做懲罰")
+                    user.conversation.Insert(0,
+     new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
+
+            }
+            else
+                user.conversation.Add(
+     new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
+            user.Money = new USER_initial.money(0, 0, 0);
             biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
     }
