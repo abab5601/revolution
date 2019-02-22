@@ -43,9 +43,11 @@ public class Cast_skill : MonoBehaviour {
             }
             //右手
             Array = prop.FindIndex(a => a.skill == (User.Skill_)user.skill_play);
+            Debug.Log("右手" + Array);
             if (Array != -1)//有武器
             {
                 ID = data.FindIndex(a => a.ID == user.backpack[Array].ID);
+                Debug.Log("右手物件" + ID);
                 Arms_R = Instantiate(article_inventory.commodity[ID].gameObject, R_position, true);
                 Arms_R.GetComponent<Prop>().display(Array);
             }
