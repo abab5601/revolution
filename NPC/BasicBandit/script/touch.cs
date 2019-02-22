@@ -57,7 +57,7 @@ public class touch : MonoBehaviour {
                         {
                         test.XLL2(0);
                         task.BT[1].Schedule = 1;
-                            t1.a1_new_most();
+                        t1.b1_new_most();
 
                     }//沒接任務
                     else if (task.BT[1].Conditions[0].Currently >= task.BT[1].Conditions[0].Max && task.BT[1].Schedule == 1)
@@ -76,7 +76,57 @@ public class touch : MonoBehaviour {
 
                      }
 
+                //任務2 要先完成才能執行 任務3
+                if (task.BT[1].Schedule == 2)
+                {
+                    if (task.BT[2].Schedule == 0)
+                    {
+                        test.XLL3(0);
+                        task.BT[2].Schedule = 1;
+                        t1.c1_new_most();
 
+                    }//沒接任務
+                    else if (task.BT[1].Conditions[0].Currently >= task.BT[1].Conditions[0].Max && task.BT[1].Schedule == 1)
+                    {
+                        test.XLL3(2);
+                        task.BT[2].Schedule = 2;//完成
+
+
+
+                    }//交替任務
+                    else if (task.BT[0].Schedule == 1)
+                    {
+                        test.XLL3(1);
+                        task.BT[2].Schedule = 1;
+                    }//進行中
+
+                }
+
+                //任務3 要先完成才能執行 任務END
+                if (task.BT[2].Schedule == 2)
+                {
+                    if (task.BT[2].Schedule == 0)
+                    {
+                        test.XLL4(0);
+                        task.BT[2].Schedule = 1;
+                        t1.d1_new_most();
+
+                    }//沒接任務
+                    else if (task.BT[2].Conditions[0].Currently >= task.BT[2].Conditions[0].Max && task.BT[2].Schedule == 1)
+                    {
+                        test.XLL4(2);
+                        task.BT[2].Schedule = 2;//完成
+
+
+
+                    }//交替任務
+                    else if (task.BT[0].Schedule == 1)
+                    {
+                        test.XLL4(1);
+                        task.BT[2].Schedule = 1;
+                    }//進行中
+
+                }
                 break;
 
             case "FloorPlane":

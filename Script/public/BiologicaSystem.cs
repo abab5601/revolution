@@ -66,7 +66,7 @@ public class BiologicaSystem : MonoBehaviour {
             high = transform.position.y;
 
         #endregion
-        #region 缺死亡判斷
+        #region 死亡判斷
         if (HP.Hp<HP.Hpmax)
         {
             if (HP.Hp <= 0 &&tag != "Player" && !Invincible)//死亡判斷

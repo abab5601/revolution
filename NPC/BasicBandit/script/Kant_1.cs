@@ -136,7 +136,63 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
         user.Money.gold += 45000;
 
     }
-    
+
+    //任務三
+    public void c1()
+    {
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "康德 :村莊外頭出現了骷髏海賊BOSS，他很邪惡，注意一點!",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+    }
+    public void c2()
+    {
+
+        user.conversation.Add(
+new USER_initial.Conversation_format(
+"康德 :漂亮幹的好!!",//顯示的字串
+str,//圖片
+XLL,//不理他
+new string[1] { "繼續閱讀" }
+,//選項  如果沒有選項　設為ｎｕｌｌ
+new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "系統 : 獲得 200000金幣 與 25500經驗",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.user.experience += 25500;
+        user.Money.gold += 200000;
+
+    }
+
+    //END
+    public void d1()
+    {
+        user.conversation.Add(
+        new USER_initial.Conversation_format(
+        "系統：以為你解鎖天賦加點限制，並且生產了更多怪物。",//顯示的字串
+        str,//圖片
+        XLL,//不理他
+        new string[1] { "繼續閱讀" }
+        ,//選項  如果沒有選項　設為ｎｕｌｌ
+        new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color(0,0,0,0);
+
+        user.user.experience += 299;
+        user.Money.gold += 0;
+
+    }
+
     // 0 = 未完成對話 1 = 進行中 2 = 獎勵時間
     public void XLL(int X)
     {
@@ -173,8 +229,39 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
 
     }
 
+    public void XLL3(int X)
+    {
+        switch (X)
+        {
+            case 0:
+                c1();
+                break;
+            case 1:
+
+                c2();
+                break;
+
+        }
 
 
+    }
+
+    public void XLL4(int X)
+    {
+        switch (X)
+        {
+            case 0:
+                d1();
+                break;
+            case 1:
+
+                d1();
+                break;
+
+        }
+
+
+    }
 
 }
 
