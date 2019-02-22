@@ -13,29 +13,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   user:
-    Name: vg
+    Name: "\u6211\u662F\u80D6\u8001\u9F20"
     Id: 
     Mod: 1
     LV: 1404
     experience: 10540
     Surname: 1
   Hp:
-    Hp: 99950
+    Hp: 97432.92
     Hpmax: 100
   Mp:
     Mp: 0
     Mpmax: 0
   XY:
-    X: 181.54152
+    X: 201.14761
     Y: 0.022000194
-    Z: 192.46327
+    Z: 188.54916
     map: 2
     Camera: -1.9693186
   Money:
     gold: 0
     silver: 0
     copper: 0
-  talent: 0300000000000000000000000000000000000000
+  talent: 0500000005000000050000000500000005000000
   chatroom:
   - "02/22 PM 12:41:32 : \u7CFB\u7D71 : \u4F60\u5DF2\u6B7B\u4EA1\n\u5C07\u6703\u628A\u4F60\u6240\u6709\u9322\u6B780\u505A\u61F2\u7F70"
   - "02/22 PM 12:41:33 : \u7CFB\u7D71 : \u4F60\u5DF2\u6B7B\u4EA1\n\u5C07\u6703\u628A\u4F60\u6240\u6709\u9322\u6B780\u505A\u61F2\u7F70"
@@ -140,7 +140,7 @@ MonoBehaviour:
   - "02/22 PM 12:58:07 - \u7CFB\u7D71 :\u5DF2\u6B7B\u4EA1"
   conversation: []
   Ctrl: []
-  backpackMax: 15
+  backpackMax: 16
   backpack:
   - Name: 222
     ID: 1
@@ -217,13 +217,18 @@ MonoBehaviour:
     Consumption: 1
     Quantity: 1
     skill: 0
+  - Name: 
+    ID: 2
+    Consumption: 1
+    Quantity: 1
+    skill: 5
   Anim:
   - Name: 
     ID: 3
     skill: 0
   - Name: 
     ID: 1
-    skill: 1
+    skill: 5
   - Name: 
     ID: 2
     skill: 0
@@ -267,21 +272,21 @@ MonoBehaviour:
   Skill: d1d1d1d1d1
   Skill_op: d1d1d1d1d1
   ability:
-    mobile: 20
-    jump: 5
+    mobile: 30
+    jump: 30
     power: 0
     agile: 0
     wisdom: 0
     Stun: 0
   Load: 0
-  UI: 14
-  direction: {x: 0.23361251, y: 0.9723298}
+  UI: 15
+  direction: {x: 0.9660882, y: -0.25821236}
   jump: 0
   but: 0
   but_no: 0
   too: 0
-  skill_play: -1
-  skill_edit: 1
+  skill_play: 5
+  skill_edit: 4
   AnimPlay: 1
-  propL: 0
+  propL: -1
   propR: -1

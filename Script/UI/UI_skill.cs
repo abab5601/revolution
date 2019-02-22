@@ -36,7 +36,7 @@ public class UI_skill : MonoBehaviour {
         var prop = new List<USER_initial.Backpack>(user.backpack);
         var data = new List<Article_inventory.Commodity>(article_inventory.commodity);
         #endregion
-        text.text = zh[user.skill_edit];//道具欄名更新
+        text.text = zh[user.skill_edit-1];//道具欄名更新
         #region 動畫
         anim_ID = anim.FindIndex(d => d.skill == (User.Skill_)user.skill_edit+1);//尋找anim ID
         if (anim_ID != -1)
@@ -152,7 +152,7 @@ public class UI_skill : MonoBehaviour {
     public void OnEnable()
     {
         resat();
-        toggle.isOn = user.Skill_op[user.skill_edit];//啟用更新
+        toggle.isOn = user.Skill_op[user.skill_edit-1];//啟用更新
     }//OK
     /// <summary>
     /// 動畫卸下

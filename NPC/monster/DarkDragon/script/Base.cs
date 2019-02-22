@@ -60,7 +60,7 @@ public class Base : MonoBehaviour
     public void OnCollisionEnter(Collision s)
     {
         //status: 0=休息1=走2=跑3=受傷4=死亡
-        animapi.passive = true;
+
     }
 
     private void OnCollisionStay(Collision s){
@@ -74,8 +74,6 @@ public class Base : MonoBehaviour
         }
 
 
-        animapi.animcon("status", 0);
-        animapi.passive = false;
     }
 
 }
