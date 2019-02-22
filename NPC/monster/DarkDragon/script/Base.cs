@@ -15,8 +15,10 @@ public class Base : MonoBehaviour
     public BiologicaSystem bs;
     //public TaskData task;
     float a = 14;
-    [Header("-----第x任務-----")]
+    [Header("-----生物ID-----")]
     public int e;
+    [Header("-----第x任務-----")]
+    public int number;
     [Header("-----給予多少單位-----")]
     public int t;
     //status: 0=休息1=走2=跑3=受傷4=死亡
@@ -40,12 +42,10 @@ public class Base : MonoBehaviour
     }
     public void OnDestroy() {
 
-        //Debug.Log(world.DeathNotebook.Exists(x => x == gameObject.GetInstanceID()) );
-        //(this.gameObject.GetInstanceID()));
-
-        if (world.DeathNotebook.Exists( x => x == e ) )
+        if (world.DeathNotebook.Exists( x => x == e) )
         {
-            taskData.BT[e].Conditions[0].Currently = t;
+            taskData.BT[number].Conditions[0].Currently += t;
+
         }
 
     }
