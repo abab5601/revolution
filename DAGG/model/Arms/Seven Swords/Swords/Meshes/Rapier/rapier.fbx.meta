@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc6bd5171403ebd4a90f535f8b1023c2
+guid: ea271074cf800014887643761248e358
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,7 +9,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: polySurface4
     4300002: rapier
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rapier_mat
+    second: {fileID: 2100000, guid: 0c1eebf5578ef2043a1c854f40d1dd0d, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

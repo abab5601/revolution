@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19b36c0c19af15c47a06700e9ebb309d
+guid: c42bfd9823b991e43941443160fe6634
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: ulfberht
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ulfberht_mat
+    second: {fileID: 2100000, guid: c37749b72e4474f488cbe47af27c8588, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
