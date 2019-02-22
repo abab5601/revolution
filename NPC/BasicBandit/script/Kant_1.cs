@@ -205,7 +205,7 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
                 a2();
                 break;
             case 2:
-                a3();
+                a2();
                 break;
 
         }
@@ -237,6 +237,10 @@ new Color(0, 0, 0, 255), new Color(143, 143, 2, 255)));//背景與文字的color
                 c1();
                 break;
             case 1:
+
+                c2();
+                break;
+            case 2:
 
                 c2();
                 break;
