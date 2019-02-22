@@ -93,7 +93,7 @@ public class player : MonoBehaviour
                 user.conversation.Add(
      new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
             user.Money = new USER_initial.money(0, 0, 0);
-            //biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
+            biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
     }
     public void FixedUpdate()
