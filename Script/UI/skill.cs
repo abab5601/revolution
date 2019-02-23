@@ -18,6 +18,7 @@ public class skill : MonoBehaviour {
     private int prop_IDL, prop_IDR, anim_ID;//背包位置
     private int prop_ID_L, prop_ID_R, anim_ID_;//資料庫位置
     public Color color;
+    public BiologicaSystem biologicaSystem;
     /// <summary>
     /// 攻擊方向
     /// </summary>
@@ -45,6 +46,7 @@ public class skill : MonoBehaviour {
                 time = (article_inventory.commodity[prop_ID_L].time + article_inventory.commodity[prop_ID_R].time + article_inventory.animation[anim_ID_].time);
                 user.too = true;
                 cancel.SetActive(false);
+                biologicaSystem.mp(-10);
                 //OK
             }
                 user.direction = vector2;

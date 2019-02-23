@@ -93,7 +93,6 @@ public class World : ScriptableObject {
         wisdom = 4
     }
     public string[] Tag = { "Player", " NPC", "Monster", "Prop", "building_damage", "building" };
-
 }
 
 

@@ -15,7 +15,7 @@ public class killTack : MonoBehaviour {
         switch (collision.gameObject.name)
         {
             case "E_user__":
-                for (int g = 0; g <= 5; g++) {
+                for (int g = 0; g <= 4; g++) {
                     task.BT[g].Schedule = 0;
                     task.BT[g].Conditions[0].Currently = 0;
                 }
