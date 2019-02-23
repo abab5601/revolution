@@ -3294,7 +3294,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -57.1025
+=======
+      value: -42.148094
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -42.148094
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3303,7 +3307,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -57.1025
+=======
+      value: -42.148094
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -42.148094
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3312,7 +3320,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMin.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: 1
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 1
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3321,7 +3333,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: 1
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 1
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3330,7 +3346,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: -37.398094
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -37.398094
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3544,7 +3564,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.00001129974
+=======
+      value: 0.00000079900065
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 0.00000079900065
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3553,7 +3577,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.000027396509
+=======
+      value: -0.000036329602
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.000036329602
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3562,7 +3590,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.00001462713
+=======
+      value: 0.000014763219
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 0.000014763219
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3571,7 +3603,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.000051704334
+=======
+      value: 0.000041269963
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 0.000041269963
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3580,7 +3616,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.000017317843
+=======
+      value: -0.000073866184
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.000073866184
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3589,7 +3629,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.000011000569
+=======
+      value: -0.0000015139874
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.0000015139874
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3598,7 +3642,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.00002168561
+=======
+      value: -0.000011238182
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.000011238182
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3737,7 +3785,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.0000101008245
+=======
+      value: -0.000019729112
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.000019729112
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3746,7 +3798,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.000044070213
+=======
+      value: -0.00004723616
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: -0.00004723616
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
@@ -3785,7 +3841,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.000004800449
+=======
+      value: 0.0000110005085
+>>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
 =======
       value: 0.0000110005085
 >>>>>>> parent of 53178fa... Merge branch 'main' of https://github.com/abab5601/revolution into main
