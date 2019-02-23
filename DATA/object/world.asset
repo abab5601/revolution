@@ -18,7 +18,7 @@ MonoBehaviour:
   wisdom: 0
   object_seed: 5
   object_time: 50
-  object_distance: 0
+  object_distance: 10
   Cumulative_quantity: 0
   LV_UP: 100
   LV_TO_UP: 10
@@ -41,9 +41,9 @@ MonoBehaviour:
     name: 
     value: 0100000001000000010000000100000001000000
   Upper_limit: 15
-  high: 100
-  high_up: 1
-  high_hp: 1
+  high: 50
+  high_up: 10
+  high_hp: 2
   Time: 845
   Time_x: 0.5
   NPC_MAX: 10

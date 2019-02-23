@@ -36,7 +36,6 @@ public class player : MonoBehaviour
         do
         {
             biologicaSystem = GetComponent<BiologicaSystem>();
-            Debug.Log(true);
         } while (biologicaSystem == null);
 
 
@@ -88,7 +87,7 @@ public class player : MonoBehaviour
         {
             if (user.conversation.Count != 0) {
                 if (user.conversation[0].String != "系統 : 你已死亡\n將會把你所有錢歸0做懲罰")
-                    user.conversation.Insert(0,
+                    user.conversation.Insert(1,
      new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
 
             }

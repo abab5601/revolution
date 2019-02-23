@@ -27,7 +27,7 @@ MonoBehaviour:
     Mpmax: 100
   XY:
     X: 141.8796
-    Y: 0.027860165
+    Y: 0.027863503
     Z: 118.0892
     map: 1
     Camera: -1.9693186
@@ -178,8 +178,8 @@ MonoBehaviour:
   MpUp: 1
   HpUp: 1
   ability:
-    mobile: 20
-    jump: 45
+    mobile: 30
+    jump: 30
     power: 0
     agile: 0
     wisdom: 0
