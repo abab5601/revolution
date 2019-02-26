@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4726e8fcd9ac69646a3b1e8744e5fc8a
+guid: 85da5239d984c4f4fa60a7debc10e88d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: sabre
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sabre_mat
+    second: {fileID: 2100000, guid: d74b19b8042992948979c128ab73dc96, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
