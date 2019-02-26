@@ -15,7 +15,7 @@ public class AnimTouchAPI : MonoBehaviour {
     //passive true & false;
     Animator anim;
     Rigidbody con;
-    public TaskData task;
+
     [Header("-----開發者選項-----")]
     public int hp;
      public string namee;
