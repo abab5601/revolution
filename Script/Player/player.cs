@@ -36,7 +36,6 @@ public class player : MonoBehaviour
         do
         {
             biologicaSystem = GetComponent<BiologicaSystem>();
-            Debug.Log(true);
         } while (biologicaSystem == null);
 
 
@@ -44,6 +43,8 @@ public class player : MonoBehaviour
         biologicaSystem.HP = user.Hp;
         biologicaSystem.MP = user.Mp;
         biologicaSystem.Control = user.Ctrl;
+        biologicaSystem.HpUp = user.HpUp;
+        biologicaSystem.MpUp = user.MpUp;
 
     }
     private void Awake()
@@ -56,6 +57,7 @@ public class player : MonoBehaviour
 
     void Update()
     {
+
         if (user.user.experience >= (user.user.LV * world.LV_TO_UP) + world.LV_UP)
         {
             user.user.experience -= (user.user.LV * world.LV_TO_UP) + world.LV_UP;
@@ -85,7 +87,7 @@ public class player : MonoBehaviour
         {
             if (user.conversation.Count != 0) {
                 if (user.conversation[0].String != "系統 : 你已死亡\n將會把你所有錢歸0做懲罰")
-                    user.conversation.Insert(0,
+                    user.conversation.Insert(1,
      new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
 
             }
@@ -93,7 +95,7 @@ public class player : MonoBehaviour
                 user.conversation.Add(
      new USER_initial.Conversation_format("系統 : 你已死亡\n將會把你所有錢歸0做懲罰", null, null, null, new Color(255, 255, 255, 255), new Color(0, 0, 0, 255)));
             user.Money = new USER_initial.money(0, 0, 0);
-            //biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
+            biologicaSystem.HP.Hp = biologicaSystem.HP.Hpmax;
         }
     }
     public void FixedUpdate()

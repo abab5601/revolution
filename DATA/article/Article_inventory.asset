@@ -111,18 +111,18 @@ MonoBehaviour:
     passive_Attack_method: 
     store: 0
     destroy: 1
-  - Name: "\u86C7\u76AE\u528D"
+  - Name: "\u5BD2\u528D"
     ID: 3
     origin:
-    - "\u5F9E\u86C7\u7684\u907A\u9AB8\u53D6\u51FA"
-    story: "\u86C7\u7684\u76AE\u8207\u7360\u7259\u88FD\u6210"
+    - "\u51B0\u6D1E\u53D6\u51FA"
+    story: "\u51B0\u88FD\u6210"
     No_use:
       user: 0
       NPC: 1
       monster: 1
     classification: 6
-    image: {fileID: 21300000, guid: 819048fe572ddd7418fe0bf031c3e302, type: 3}
-    gameObject: {fileID: 1297072835263782, guid: 3a3053d72f36f574e959741be7f2c4d1,
+    image: {fileID: 21300000, guid: c665456f9ea863c4bbbad873648ddd39, type: 3}
+    gameObject: {fileID: 1756704531812244, guid: 91cb5754a04b15343adf25fd7e0180db,
       type: 2}
     overlapping: 0
     place:
@@ -152,7 +152,7 @@ MonoBehaviour:
     wisdom_limit: 0
     rare: 0
     time: 1
-    initiative_Attack_method: "\u8B93\u4F60\u617E\u706B\u7E8F\u8EAB"
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
     passive_Attack_method: 
     store: 0
     destroy: 1

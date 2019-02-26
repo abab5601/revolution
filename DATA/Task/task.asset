@@ -16,26 +16,26 @@ MonoBehaviour:
     Description: "\u53BB\u6751\u838A\u5916\u982D\uFF0C\u89E3\u6C7A\u6389\u5341\u96BB\u602A\u7269\u3002\u56DE\u4F86\u627E\u5EB7\u5FB7\u5C0D\u8A71"
     Conditions:
     - Name: "\u4E3B\u7DDA\u4EFB\u52D91-\u6696\u6696\u8EAB\u5B50\u5427\uFF0C\u4F7F\u8005"
-      Currently: 0
+      Currently: 10
       Max: 10
       Image: {fileID: 0}
-    Schedule: 0
+    Schedule: 2
   - Name: "\u4E3B\u7DDA\u4EFB\u52D92-\u91CE\u751F\u7684\u9748\u725B"
     Description: "\u524D\u5F80\u6751\u838A\u5916\uFF0C\u627E\u5230\"\u91CE\u751F\u7684\u9748\u725B\"\u4E26\u4E14\u64CA\u57AE\u4ED6"
     Conditions:
     - Name: "\u6253\u79AE\u5305\u9001\u8349\u5305"
-      Currently: 0
+      Currently: 1
       Max: 1
       Image: {fileID: 0}
-    Schedule: 0
+    Schedule: 2
   - Name: "\u4E3B\u7DDA\u4EFB\u52D93-\u9AB7\u9ACF\u6D77\u8CCABOSS"
     Description: "\u6751\u838A\u5916\u982D\u51FA\u73FE\u4E86\u6D77\u76DCBOSS\uFF0C\u6D88\u6EC5\u5B83\u4E26\u56DE\u53BB\u627E\u5EB7\u5FB7"
     Conditions:
     - Name: "\u6253\u79AE\u5305\u9001\u8349\u5305"
-      Currently: 0
+      Currently: 1
       Max: 1
       Image: {fileID: 0}
-    Schedule: 0
+    Schedule: 2
   - Name: "\u4E3B\u7DDA\u4EFB\u52D94-\u9AD4\u9A57\u6642\u9593"
     Description: "\u7372\u5F97\u6D77\u76DCBOSS\u7684\u52A0\u6301\u5F8C\uFF0C\u89E3\u9396\u5929\u8CE6\u52A0\u9EDE\u9650\u5236\uFF0C\u53CA\u751F\u7522\u66F4\u591A\u602A\u7269\u7DF4\u7B49\u3002"
     Conditions:
@@ -43,7 +43,7 @@ MonoBehaviour:
       Currently: 0
       Max: 9999
       Image: {fileID: 0}
-    Schedule: 0
+    Schedule: 2
   - Name: "\u66AB\u7121\u958B\u653E"
     Description: "\u53C3\u89C0\u7B2C\u4E8C\u7AE0\u5730\u5716\u3002"
     Conditions:

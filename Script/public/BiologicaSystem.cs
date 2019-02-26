@@ -23,6 +23,8 @@ public class BiologicaSystem : MonoBehaviour {
     public int resurrection = 0;//復活//復活後value -= 1 // HP && MP = MAX, 控制效果會完全移除(包誇正向)
     public float ResurrectionTime ;//復活倒數時間//預設為DATA裡的值
     public User.Ability ability,nowability;
+    public float time;//回復時間計算
+    public float HpUp = 0.5f, MpUp = 0.5f;
     [Header("附近物件")]
     public List<Transform> nearby_obj;
     void Start () {
@@ -59,6 +61,19 @@ public class BiologicaSystem : MonoBehaviour {
     }
     private void Update()
     {
+        time += Time.deltaTime;
+        if (time >= 1)
+        {
+            time -= 1;
+            if (HP.Hp + HpUp <= HP.Hpmax)
+                hp(HpUp);
+            else if (HP.Hpmax - HP.Hp > 0)
+                hp(HP.Hpmax - HP.Hp);
+            if (MP.Mp + MpUp <= MP.Mpmax)
+                mp(MpUp);
+            else if (MP.Mpmax - MP.Mp > 0)
+                mp(MP.Mpmax - MP.Mp);
+        }
         #region 玩家跳躍高度檢查
         if (transform.position.y > high_up)
             high_up = transform.position.y;

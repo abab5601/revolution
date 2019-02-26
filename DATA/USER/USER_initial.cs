@@ -37,6 +37,9 @@ public class USER_initial : ScriptableObject
     [Header("欄位啟用")]
     [Header("right_1, right_2, right_3, left_1, left_2, left_3, pet_skill_1, pet_skill_2")]
     public bool[] Skill/*玩家購買*/,Skill_op/*玩家開啟*/;
+[Header("每秒回復 魔力,血量")]
+    public float MpUp, HpUp;
+
     #region 玩家基本資料庫
     #region HP
     [System.Serializable]
