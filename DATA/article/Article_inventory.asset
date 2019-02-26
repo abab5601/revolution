@@ -196,7 +196,7 @@ MonoBehaviour:
   - Name: "\u760B\u9001"
     ID: 2
     story: 
-    time_play: 0
+    time_play: 15
     text: 
     time: 0
     origin: []

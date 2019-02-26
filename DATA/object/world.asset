@@ -23,7 +23,7 @@ MonoBehaviour:
   LV_UP: 100
   LV_TO_UP: 10
   Sensitivity: 5
-  Lens_distance: 20.98
+  Lens_distance: 23.79
   Career:
   - name: "\u6C92\u8077\u696D"
     value: 0100000001000000010000000100000001000000
@@ -44,7 +44,7 @@ MonoBehaviour:
   high: 50
   high_up: 10
   high_hp: 2
-  Time: 845
+  Time: 1184
   Time_x: 0.5
   NPC_MAX: 10
   NPC_GO: 10
@@ -56,7 +56,7 @@ MonoBehaviour:
   delay: 0.1
   range: 10
   ResurrectionTime: 0
-  DeathNotebook: 
+  DeathNotebook: 583cf5ff583cf5ffd43ef5ffd43ef5ff602ef5ff602ef5ff362df5ff362df5ff2e3bf5ff2e3bf5ffde31f5ffde31f5ff0c2cf5ff0c2cf5ffb829f5ffb829f5ff8a2ff5ff8a2ff5ff0833f5ff0833f5ffe22af5ffe22af5ffb430f5ffb430f5ff3234f5ff3234f5ff8e28f5ff8e28f5ffda38f5ffda38f5ff8636f5ff8636f5ffb037f5ffb037f5ff
   Rebirth_point:
   - {x: 0, y: 0, z: 0}
   - {x: 141.8796, y: 3.875535, z: 118.0892}

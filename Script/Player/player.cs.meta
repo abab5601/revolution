@@ -4,7 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - User: {fileID: 11400000, guid: a7f18a82f67f51b4f82b09269a8fad54, type: 2}
+  - anim: {instanceID: 0}
+  - user: {fileID: 11400000, guid: a7f18a82f67f51b4f82b09269a8fad54, type: 2}
+  - world: {instanceID: 0}
+  - Article_i: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
