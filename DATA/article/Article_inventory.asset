@@ -156,6 +156,314 @@ MonoBehaviour:
     passive_Attack_method: 
     store: 0
     destroy: 1
+  - Name: "\u8D64\u73E0-\u96D9\u9762\u5203"
+    ID: 4
+    origin:
+    - "\u5F9E\u51B0\u539F\u8207\u706B\u5C71\u7684\u4EA4\u754C\u8655\uFF0C\u6DEC\u934A\u800C\u51FA\u7684\u795E\u5668"
+    story: "\u65E9\u5728\u4E16\u754C\u8A95\u751F\u4E4B\u6642\u3002\u5C31\u5DF2\u7D93\u88AB\u51B0\u4E4B\u9B54\u795E\u3002\u5C01\u5370\u5728\u5730\u571F\u88E1\u3002\u53EA\u6709\u771F\u6B63\u88AB\u9B54\u795E\u6333\u5B9A\u7684\u4EBA\uFF0C\u624D\u80FD\u89E3\u9664\u5C01\u5370\uFF0C\u4E26\u88DD\u5099\u3002"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: 1869bbe21a92018479fb07b3784e45e6, type: 3}
+    gameObject: {fileID: 100004, guid: d096c2dbc4ba8b344a7752253f0049ad, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u98A8\u9280\u4E4B\u773C"
+    ID: 5
+    origin:
+    - "\u907A\u8DE1\u4E4B\u6751\u88E1\u4E00\u4F4D\u75C5\u5012\u5728\u5730\u4E0A\u7684\u6B66\u58EB\u8D08\u8207\u7684\u3002"
+    story: "\u5728\u6230\u722D\u7206\u767C\u5F8C\uFF0C\u4E00\u4F4D\u528D\u58EB\u70BA\u4E86\u8B93\u4E0B\u4E00\u88AB\u7684\u98A8\u4E4B\u4F7F\u8005\u8207\u9B54\u795E\u596E\u6230\uFF0C\u5C07\u81EA\u5DF1\u7684\u9748\u9B42\u5C01\u5370\u5728\u88E1\u9762\u3002"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: eb49cb64ffb62ff489a9572c95fcf70c, type: 3}
+    gameObject: {fileID: 100006, guid: 47377a9aa6b50294a865e21fe968af4d, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u5927\u60B2\u5929\u8836\u5C3A"
+    ID: 6
+    origin:
+    - "\u5B64\u6148\u83E9\u85A9\u4EE4\u6307"
+    story: "\u6148\u60B2\u70BA\u4F5B\uFF0C\u793E\u7F8E\u5FC3\u7684\u5FD7\u9858"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: 36eb61ed18dcf1e43a1d917014756b8d, type: 3}
+    gameObject: {fileID: 100006, guid: 6a0eedfe1b2e14d47b276e72159e85b1, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u8CCA\u745F"
+    ID: 7
+    origin:
+    - "\u672A\u77E5"
+    story: "\u672A\u77E5-\u6C34\u4E16\u754C\u7684\u5BF6\u85CF"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: 97b4d57828fa3a74b8c2dc7097952c6d, type: 3}
+    gameObject: {fileID: 100006, guid: 10329765d2451e540b1dae01df03c59c, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u897F\u6D0B\u4E9E\u745F\u4E4B\u528D"
+    ID: 8
+    origin:
+    - "\u4E9E\u745F\u5730\u5E36\u4E2D\u7684\u57CE\u5821"
+    story: "\u570B\u738B\u4E9E\u745F\u4E09\u4E16\u907A\u7559\u4E0B\u4F86\u7684\u5BF6\u528D"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: 706d1236832b87f418948bb2c36b36eb, type: 3}
+    gameObject: {fileID: 100006, guid: b9432b6a4a78c64449366f08c7196deb, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u7FF9\u5200"
+    ID: 9
+    origin:
+    - "\u6843\u82B1\u5C71"
+    story: "\u9B6F\u5FD7\u6607\u8DD1\u53BB\u6253\u5C0F\u9738\u738B\u5E36\u7684\u5200"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: a12eda6c720b7ed48986f2d79fe0b69f, type: 3}
+    gameObject: {fileID: 100006, guid: 0af636dcf564eb140b31a01bf4b6a9fd, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
+  - Name: "\u84CB\u4E9E\u5200"
+    ID: 10
+    origin:
+    - "\u51B0\u6D1E\u53D6\u51FA"
+    story: "\u5FB7\u746A\u5438\u96C5\u6240\u88FD\u4F5C\u7684\u5200\u528D\uFF0C\u62FF\u8D77\u4F86\u76F8\u7576\u627F\u91CD"
+    No_use:
+      user: 0
+      NPC: 1
+      monster: 1
+    classification: 6
+    image: {fileID: 21300000, guid: 287aa9417f354b849825c163737b8c07, type: 3}
+    gameObject: {fileID: 100006, guid: a45a25ec0193de54fbd3efca6e19755e, type: 2}
+    overlapping: 0
+    place:
+      backpack: 1
+      right: 1
+      left: 1
+      head: 0
+      body: 0
+      leg: 0
+      foot: 0
+      Ring: 0
+      necklace: 0
+      gloves: 0
+      Special_props: 0
+      Throw: 1
+      NPC: 0
+      monster: 0
+      box: 1
+    durable: 0
+    LV: 0
+    Level_limit: 0
+    power: 0
+    power_limit: 0
+    agile: 0
+    agile_limit: 0
+    wisdom: 0
+    wisdom_limit: 0
+    rare: 0
+    time: 1
+    initiative_Attack_method: "\u8B93\u4F60\u5BD2\u51B7\u4EA4\u52A0"
+    passive_Attack_method: 
+    store: 0
+    destroy: 1
   animation:
   - Name: "\u96F6\u5F0F/\u5341\u842C\u4F0F\u7279\u7D42\u6975\u4F0F\u7279\u72C2\u96F7\u9583\u6BC0\u6EC5\u7684\u5674\u5C04\u767D\u5149\u70AB\u98A8\u885D\u92D2\u9F8D\u6372\u98A8\u4E4B\u79D2\u6BBA\u9583\u7A7A\u5730\u7344\u6975\u6A02\u5EB7\u5B87\u3002\u596E\u529B\u6295\u64F2"
     ID: 0
@@ -304,7 +612,7 @@ MonoBehaviour:
   - Name: "\u5BB6\u6A02\u798F\u8CB7\u4E00\u9001\u4E00"
     ID: 8
     story: 
-    time_play: 0
+    time_play: 4.5
     text: 
     time: 0
     origin: []
