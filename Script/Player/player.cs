@@ -13,7 +13,7 @@ public class player : MonoBehaviour
     //public GameObject user_;
     private BiologicaSystem biologicaSystem;
     public Animator anim;
-    public TaskData1 task;
+
 
     int Mobile_status;
 
