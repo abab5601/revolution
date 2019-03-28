@@ -20,6 +20,18 @@ public class USER_initial : ScriptableObject
     [Header("天賦")]
     [Header("移動 = 0 , 跳 = 1 , 力量 = 2 , 敏捷 = 3 , 智慧 = 4")]
     public int[] talent;
+    [Header("主線任物")]
+    public Task_status Task_main;
+    [Header("之線任務")]
+    public Task_status[] Branch_line;
+    [System.Serializable]
+    public struct Task_status
+    {
+        [Header("任務ID")]
+        public int ID;
+        [Header("任務進度")]
+        public int Array;
+    }
     [Header("聊天室")]
     public List<string> chatroom;
     [Header("彈跳對話框內容")]
