@@ -21,7 +21,10 @@ public class Transfer : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
-            GO_go_point(other.gameObject.transform);
+            if (GO != null)
+                GO_go_point(other.gameObject.transform);
+            else
+                end.Invoke();
     }
     private void OnTriggerExit(Collider other)
     {
