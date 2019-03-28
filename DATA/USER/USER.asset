@@ -23,12 +23,12 @@ MonoBehaviour:
     Hp: 100
     Hpmax: 100
   Mp:
-    Mp: 100
+    Mp: 92
     Mpmax: 100
   XY:
-    X: -69.778114
-    Y: 0.36052883
-    Z: 21.008553
+    X: 95.068794
+    Y: 1.0234795
+    Z: 56.821617
     map: 2
     Camera: -1.9693186
   Money:
@@ -89,53 +89,46 @@ MonoBehaviour:
     ID: 1
     Consumption: 1
     Quantity: 1
+    skill: 0
+  - Name: 
+    ID: 6
+    Consumption: 1
+    Quantity: 1
+    skill: 0
+  - Name: 
+    ID: 6
+    Consumption: 1
+    Quantity: 1
+    skill: 0
+  - Name: 
+    ID: 6
+    Consumption: 1
+    Quantity: 1
+    skill: 0
+  - Name: 
+    ID: 7
+    Consumption: 1
+    Quantity: 1
     skill: 5
+  - Name: 
+    ID: 9
+    Consumption: 1
+    Quantity: 1
+    skill: 5
+  - Name: 
+    ID: 10
+    Consumption: 1
+    Quantity: 1
+    skill: 5
+  - Name: 
+    ID: 4
+    Consumption: 1
+    Quantity: 1
+    skill: 1
   Anim:
   - Name: 
-    ID: 3
-    skill: 0
-  - Name: 
     ID: 1
-    skill: 0
-  - Name: 
-    ID: 2
-    skill: 5
-  - Name: 
-    ID: 3
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
-  - Name: 
-    ID: 4
-    skill: 0
+    skill: 1
   Anim_max: 15
   Skill: d1d1d1d1d1
   Skill_op: d1d1d1d1d1
@@ -150,13 +143,13 @@ MonoBehaviour:
     Stun: 0
   Load: 0
   UI: 16
-  direction: {x: 0.2790684, y: 0.9602712}
+  direction: {x: 0.08154108, y: -0.99666995}
   jump: 0
-  but: 1
+  but: 0
   but_no: 0
   too: 0
-  skill_play: -1
-  skill_edit: 5
-  AnimPlay: 2
+  skill_play: 1
+  skill_edit: 1
+  AnimPlay: 4
   propL: -1
   propR: -1
