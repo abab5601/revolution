@@ -7,7 +7,6 @@ public class Task : ScriptableObject {
     public task main;
     [Header("支線任務")]
     public task Branch_line;
-    [System.Serializable]
     public struct task {
         [Header("任務ID")]
         public int ID;

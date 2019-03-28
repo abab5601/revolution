@@ -21,7 +21,7 @@ public class Task_UI : MonoBehaviour {
     }
     #endregion
     public UI ui;
-
+    public TaskData taskData;
     public GameObject not, objs;
     public List<GameObject> gameObjects;
     // Use this for initialization
